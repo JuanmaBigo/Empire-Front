@@ -1,0 +1,97 @@
+.logo-home {
+    width: 25vw;
+    height: 65vh;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  .section-logo-home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .home-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .video-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .title-home {
+    font-family: 'roboto', 'serif';
+    font-size: 8rem;
+    font-weight: 400;
+    color: #fdfcfcb0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    text-shadow: 5px 5px 4px rgb(0, 0, 0);
+  }
+  
+  
+  .btn-home {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #f9f9f9;
+    background-color: rgba(128, 128, 128, 0.5);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    opacity: 0.5;
+    position: absolute;
+    text-shadow: 5px 5px 4px rgb(0, 0, 0);
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  /* Estilos para dispositivos con pantalla mínima de 320px y máxima de 768px */
+@media (min-width: 320px) and (max-width: 900px) {
+    .logo-home {
+      width: 60vw;
+      height: auto;
+      opacity: 0.2;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    
+    .section-logo-home {
+      height: 100vh;
+    }
+    
+    .title-home {
+      font-size: 6rem;
+      top: 49%;
+    }
+    
+    .btn-home {
+      font-size: 1.5rem;
+      top: 85%;
+    }
+  }
+  

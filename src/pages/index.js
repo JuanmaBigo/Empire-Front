@@ -3,11 +3,12 @@ import React from 'react'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 // import Index from "./Index/Index";
 
-import { Navigate } from 'react-router-dom';
+//import { Navigate } from 'react-router-dom';
 
 import { createBrowserRouter } from "react-router-dom"
+import Home from './Home/Home';
 
-let token = localStorage.getItem('token')
+//let token = localStorage.getItem('token')
 
 export const router = createBrowserRouter([
     
@@ -26,6 +27,7 @@ export const router = createBrowserRouter([
         children:[
             // {path:'register',element : <AuthForm />},
             // {path:'signin',element : <AuthForm />},
+            {path:'home',element : <Home />}
         ]
     } 
     
