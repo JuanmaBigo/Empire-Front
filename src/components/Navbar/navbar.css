@@ -1,0 +1,13 @@
+.ham-menu{
+    cursor: pointer;
+}
+.hamburguer-menu{
+    width: 3.563rem;
+    height: 5.371875vh;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .hamburguer-menu{
+        width: 8vh;
+    }
+}
