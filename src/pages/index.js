@@ -7,6 +7,7 @@ import MainLayout from '../layouts/MainLayout/MainLayout'
 
 import { createBrowserRouter } from "react-router-dom"
 import Home from './Home/Home';
+import Principal from './Principal/Principal';
 
 //let token = localStorage.getItem('token')
 
@@ -27,7 +28,8 @@ export const router = createBrowserRouter([
         children:[
             // {path:'register',element : <AuthForm />},
             // {path:'signin',element : <AuthForm />},
-            {path:'home',element : <Home />}
+            {path:'home',element : <Home />},
+            {path:'principal',element : <Principal/>}
         ]
     } 
     
