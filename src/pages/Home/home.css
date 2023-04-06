@@ -52,22 +52,21 @@
   
   .btn-home {
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    color: #f9f9f9;
-    background-color: rgba(128, 128, 128, 0.5);
+    font-size: 1rem;
+    color: #050505;
+    background-color: rgba(252, 250, 250, 0.816);
     border: none;
     padding: 1rem 2rem;
-    border-radius: 40px;
     opacity: 0.5;
     position: absolute;
-    text-shadow: 5px 5px 4px rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
   }
   
-  /* Estilos para dispositivos con pantalla mínima de 320px y máxima de 768px */
+/* Estilos para dispositivos con pantalla mínima de 320px y máxima de 768px */
 @media (min-width: 320px) and (max-width: 900px) {
     .logo-home {
       width: 60vw;
