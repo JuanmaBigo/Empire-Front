@@ -1,0 +1,96 @@
+.contenedor-principalpage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contenedor-img-principalpage-1 {
+    height: 100%;
+    width: 33.33%;
+    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02.jpg');
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.contenedor-img-principalpage-2 {
+    height: 100%;
+    width: 33.33%;
+    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/gateway-family/concept/2020_06/header_c.jpg');
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.contenedor-img-principalpage-3 {
+    height: 100%;
+    width: 33.33%;
+    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/face_react/after_sales/service/after_sales_service_hb_1.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.contenedor-img-principalpage-1,
+.contenedor-img-principalpage-2,
+.contenedor-img-principalpage-3 {
+    height: 100%;
+    width: 33.33%;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.4s ease-in-out;
+}
+
+.contenedor-img-principalpage-1:hover,
+.contenedor-img-principalpage-2:hover,
+.contenedor-img-principalpage-3:hover {
+    transform: scale(1.1);
+}
+
+.title-principal {
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 320px) and (max-width: 900px) {
+
+    .contenedor-principalpage {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-img-principalpage-1,
+    .contenedor-img-principalpage-2,
+    .contenedor-img-principalpage-3 {
+        height: 33.33%;
+        width: 100%;
+    }
+
+    .title-principal {
+        height: 33vh;
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        font-weight: 300;
+        color: #fff;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 0;
+    }
+
+
+}
