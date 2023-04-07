@@ -6,7 +6,7 @@ export default function MuseumTour() {
     <>
       <div className='museumtour-section'>
         <video className="video-museumtour" loop muted autoPlay>
-          <source src="../../video/tourmuseum.mp4" type="video/mp4" />
+          <source src="../../video/tourmuseum2.mp4" type="video/mp4" />
         </video>
       </div>
     </>
