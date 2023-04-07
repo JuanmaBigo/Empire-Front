@@ -1,0 +1,41 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 15vh;
+    position: absolute;
+    width: 87.361vw;
+    margin-left: 60px;
+}
+
+.logo{
+    width: 10vh;
+    height: 15vh;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .logo {
+        width: 6vh;
+        height: 10vh;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo {
+        width: 6vh;
+        height: 9vh;
+    }
+}
+@media (max-width: 1023px) {
+    header{     
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    position: absolute;
+    width: 87.361vw;
+    margin-left: 1rem;
+    }
+    
+    
+}
