@@ -10,6 +10,9 @@ import Home from './Home/Home';
 import Principal from './Principal/Principal';
 import Museum from './Museum/Museum';
 import MuseumTour from './TourMuseum/TourMuseum';
+import Service from './Service/Service';
+import Vehicles from './Vehicles/Vehicles';
+
 
 //let token = localStorage.getItem('token')
 
@@ -33,7 +36,9 @@ export const router = createBrowserRouter([
             {path:'home',element : <Home />},
             {path:'principal',element : <Principal/>},
             {path:'museum',element : <Museum/>},
-            {path:'museum-tour',element : <MuseumTour/>}
+            {path:'museum-tour',element : <MuseumTour/>},
+            {path:'service',element : <Service/>},
+            {path:'vehicles',element : <Vehicles/>}
 
         ]
     } 
