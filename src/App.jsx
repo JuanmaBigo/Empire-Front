@@ -30,9 +30,9 @@ function App() {
 			{/* <Home/>  */}
 			{/*  <Principal/>  */}
 			{/* <Museum /> */}
-			{/* <MuseumTour/> */}
+			 <MuseumTour/> 
 			{/* <Service/> */}
-			<Vehicles/>
+			{/* <Vehicles/> */}
 
 		</>
 
