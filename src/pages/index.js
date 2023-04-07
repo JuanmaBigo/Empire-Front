@@ -9,6 +9,7 @@ import { createBrowserRouter } from "react-router-dom"
 import Home from './Home/Home';
 import Principal from './Principal/Principal';
 import Museum from './Museum/Museum';
+import MuseumTour from './TourMuseum/TourMuseum';
 
 //let token = localStorage.getItem('token')
 
@@ -31,7 +32,8 @@ export const router = createBrowserRouter([
             // {path:'signin',element : <AuthForm />},
             {path:'home',element : <Home />},
             {path:'principal',element : <Principal/>},
-            {path:'museum',element : <Museum/>}
+            {path:'museum',element : <Museum/>},
+            {path:'museum-tour',element : <MuseumTour/>}
 
         ]
     } 

@@ -11,7 +11,9 @@ import { Provider } from 'react-redux'; */
 
 
 //import Home from './pages/Home/Home.jsx'  // ----- viazualizacion momentanea
-import Principal from './pages/Principal/Principal' //----- viazualizacion momentanea
+/* import Principal from './pages/Principal/Principal' //----- viazualizacion momentanea
+import MuseumTour from './pages/TourMuseum/TourMuseum' */
+
 
 
 
@@ -23,10 +25,11 @@ function App() {
 			{/* <Provider store={store}>
 				<RouterProvider router={router} />
 			</Provider> */}
-			 {/* <Home/>  */}
-			 <Principal/> 
-			{/* <Museum/> */}
-	
+			{/* <Home/>  */}
+			{/*  <Principal/>  */}
+			<Museum />
+			{/* <MuseumTour/> */}
+
 		</>
 
 
