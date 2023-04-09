@@ -11,12 +11,13 @@ import { Provider } from 'react-redux'; */
 
 
 
+
+// import Register from './pages/Register/Register'
+// import Login from './pages/Login/Login'
 //import Home from './pages/Home/Home.jsx'  // ----- viazualizacion momentanea
 /* import Principal from './pages/Principal/Principal' //----- viazualizacion momentanea*/
 import MuseumTour from './pages/TourMuseum/TourMuseum' 
 import Vehicles from './pages/Vehicles/Vehicles'
-
-
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
 			{/* <Provider store={store}>
 				<RouterProvider router={router} />
 			</Provider> */}
+			{/* <Register/> */}
+			{/* <Login /> */}
 			{/* <Home/>  */}
 			{/*  <Principal/>  */}
 			{/* <Museum /> */}
@@ -35,7 +38,7 @@ function App() {
 			{/* <Vehicles/> */}
 
 		</>
-
+		
 
 	)
 }
