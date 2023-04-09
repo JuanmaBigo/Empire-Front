@@ -16,6 +16,7 @@ import { Provider } from 'react-redux'; */
 // import Register from './pages/Register/Register'
 // import Login from './pages/Login/Login'
 import Contact from './pages/Contact/Contact'
+
 import MuseumTour from './pages/TourMuseum/TourMuseum' 
 import Vehicles from './pages/Vehicles/Vehicles'
 
