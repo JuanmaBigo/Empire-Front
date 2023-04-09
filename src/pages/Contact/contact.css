@@ -1,0 +1,159 @@
+.bg-contact {
+    width: 100%;
+    height: 100vh;
+    padding-top: 3rem;
+    background-image: url('../../images/contact.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bg-title-contact img {
+    width: 70%;
+    height: 18rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: contain;
+}
+.div-contact {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.formcontact {
+    width: 50vh;
+    height: 60vh;
+    margin-right: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+.contact {
+    width: 40vh;
+    height: 3vh;
+    color: white;
+    border: none;
+    border-bottom: 2.5px solid white;
+    background-color: transparent;
+    margin-bottom: 3rem;
+    font-size: x-large;
+    font-weight: bolder;
+    line-height: 0.1;
+}
+::placeholder {
+    color: white;
+  }
+.contact:focus {
+    outline: none;
+    border-color: black;
+  }
+.btncontact {
+    width: 20vh;
+    height: 5vh;
+    color: white;
+    background-color: black;
+    font-size: x-large;
+    font-weight: bolder;
+}
+.text-contact {
+    width: 100%;
+    height: 3vh;
+    color: gainsboro;
+    margin-bottom: 3vh;
+    padding-left: 5vh;
+    font-size: medium;
+}
+.text-contact a {
+    text-decoration: none;
+    color: white;
+    margin-left: 0.3rem;
+}
+.contact .option {
+    background-color: black;
+}
+textarea {
+    width: 40vh;
+    height: 15vh;
+    background-color: rgba(255, 255, 255, 0.315);
+    color: white;
+    margin-bottom: 0.7rem;
+    font-size: larger;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .bg-contact {
+        padding-top: 0rem;
+    }
+    .bg-title-contact {
+        width: 100%;
+    }
+    .bg-title-contact img {
+        width: 70%;
+        height: 13rem;
+        margin-left: 5vh;
+    }
+    .formcontact {
+        width: 40vh;
+        height: 55vh;
+        margin-right: 8vh;
+    }
+    .contact {
+        width: 35vh;
+        height: 5vh;
+        color: white;
+        margin-bottom: 1.5rem;
+        font-size: medium;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+    .btncontact {
+        width: 15vh;
+        height: 5vh;
+        color: white;
+        background-color: black;
+        font-size: medium;
+        font-weight: bolder;
+    }
+    .text-contact {
+        width: 100%;
+        height: 3vh;
+        padding-left: 3vh;
+        font-size: small;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .bg-contact {
+        padding-top: 1rem;
+    }
+    .bg-title-contact img {
+        width: 80%;
+        height: 15rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        object-fit: contain;
+        padding-left: 8rem;
+    }
+    .formcontact {
+        width: 50vh;
+        height: 45vh;
+        margin-right: 15vh;
+    }
+    .div-contact {
+        width: 100%;
+        height: 50vh;
+    }
+    .contact {
+        margin-bottom: 2rem;
+        font-size: large;
+    }
+    .btncontact {
+        font-size: large;
+        font-weight: bolder;
+        margin-top: 2rem;
+    }
+}
