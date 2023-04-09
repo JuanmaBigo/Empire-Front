@@ -1,0 +1,76 @@
+
+.contenedor-servicepage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/gateway/ownership/s/gate_ownership_s1_03.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+  
+  .titles-service-page {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+  
+  }
+  
+  .empire-servicepage-img {
+    width: 80vw;
+    height: 35vh;
+    margin-right: 5vw;
+  }
+  
+  .btn-servicepage {
+    width: 10rem;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    margin-top: 30vh;
+  }
+  
+  .section-btn-service {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (min-width: 300px) and (max-width: 900px) {
+    .titles-service-page {
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15vh;
+    }
+    .empire-servicepage-img {
+        width: 80vw;
+        height: 15vh;
+        margin-right: 5vw;
+      }
+   
+    
+      .btn-servicepage {
+        width: 10rem;
+        padding: 10px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #fff;
+        background-color: #000;
+        border: none;
+        margin-top: 40vh;
+      }
+      
+  }

@@ -1,0 +1,27 @@
+.museumtour-section{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.video-museumtour{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+   
+}
+
+@media (min-width: 320px) and (max-width: 900px) {
+    .museumtour-section{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .video-museumtour{
+        object-fit: contain;
+        
+    }
+}
