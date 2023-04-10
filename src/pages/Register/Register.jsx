@@ -8,7 +8,7 @@ export default function Register() {
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
-  const confirmPasswordRef = useRef();
+  // const confirmPasswordRef = useRef();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -53,11 +53,16 @@ export default function Register() {
        
         Swal.fire({
           title: 'User successfully created',
-          showClass: {
-            popup: 'animate__animated animate__fadeInDown'
+          icon: 'success',
+          confirmButtonText: 'Ok',
+          background: 'black',
+          customClass: {
+            title: 'text-white',
+            confirmButton: 'bg-green-500'
           },
-          hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
+          confirmButtonStyles: {
+            background: 'red',
+            color: 'white'
           }
         })
         event.target.reset()

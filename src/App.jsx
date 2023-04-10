@@ -11,8 +11,8 @@ import { Provider } from 'react-redux'; */
 
 //import Home from './pages/Home/Home.jsx'   ----- viazualizacion momentanea
 //import Principal from './pages/Principal/Principal' ----- viazualizacion momentanea
-// import Register from './pages/Register/Register'
-import Login from './pages/Login/Login'
+import Register from './pages/Register/Register'
+// import Login from './pages/Login/Login'
 // import Contact from './pages/Contact/Contact'
 
 function App() {
@@ -25,8 +25,8 @@ function App() {
 			</Provider> */}
 			{/* <Home/> */}
 			{/* <Principal/> */}
-			{/* <Register/> */}
-			<Login />
+			<Register/>
+			{/* <Login /> */}
 			{/* <Contact /> */}
 		</>
 		
