@@ -5,8 +5,8 @@ import img from '../../images/titlecontact.png';
 
 export default function ContactUs() {
   return (
-    <div className="bg-contact">
-        <div className="bg-title-contact">
+    <div className="bg-contactus">
+        <div className="bg-title-contactus">
             <img src={img} alt="contact" />
         </div>
         <div className='div-text-contact'>
