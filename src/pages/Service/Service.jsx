@@ -1,6 +1,6 @@
 import React from 'react'
 import './service.css'
-//import { Link as Anchor } from 'react-router-dom'
+import { Link as Anchor } from 'react-router-dom'
 
 
 export default function Service() {
@@ -11,9 +11,7 @@ export default function Service() {
           <img className='empire-servicepage-img' src='./image/title-empire-service.png' alt='title museum' />
         </div>
         <div className='section-btn-service'>
-          {/*     <Anchor to='/form-contact'> */}
-          <button className='btn-servicepage'>CONTACT US</button>
-          {/*  </Anchor> */}
+          <Anchor to='contact' className='btn-servicepage'>CONTACT US</Anchor>
         </div>
       </div>
 

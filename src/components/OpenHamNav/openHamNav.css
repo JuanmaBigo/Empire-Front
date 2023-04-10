@@ -1,9 +1,10 @@
 .open-nav{
     background: black;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     width: 29.861vw;
     height: 100vh;
-    z-index: 100000;
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,8 +24,9 @@
     }
 }
 
-@media (max-width: 1023px){
+@media (max-width: 767px){
     .open-nav{
-        width: 100vw;
+        width: 65vw;
+        border-radius: 0;
     }
 }

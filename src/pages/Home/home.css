@@ -1,96 +1,115 @@
-.logo-home {
-    width: 25vw;
-    height: 65vh;
-    opacity: 0.2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-  
-  .section-logo-home {
-    position: relative;
+.contenedor-principalpage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     height: 100vh;
-    width: 100%;
-    z-index: 2;
-  }
-  
-  .home-section {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .video-home {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-  
-  .title-home {
-    font-family: 'roboto', 'serif';
-    font-size: 8rem;
-    font-weight: 400;
-    color: #fdfcfcb0;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2;
-    text-shadow: 5px 5px 4px rgb(0, 0, 0);
-  }
-  
-  
-  .btn-home {
+    overflow: hidden
+}
+
+.contenedor-img-principalpage-1 {
+    height: 100%;
+    width: 33.33%;
+    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02.jpg');
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.contenedor-img-principalpage-2 {
+    height: 100%;
+    width: 33.33%;
+    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/gateway-family/concept/2020_06/header_c.jpg');
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.contenedor-img-principalpage-3 {
+    height: 100%;
+    width: 33.33%;
+    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/face_react/after_sales/service/after_sales_service_hb_1.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.contenedor-img-principalpage-1,
+.contenedor-img-principalpage-2,
+.contenedor-img-principalpage-3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* .contenedor-img-principalpage-1:hover,
+.contenedor-img-principalpage-2:hover,
+.contenedor-img-principalpage-3:hover {
+    transform: scale(1.1);
+} */
+.title-principal:hover{
+    transform: scale(1.1);
+} 
+
+.title-principal {
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #050505;
-    background-color: rgba(252, 250, 250, 0.816);
-    border: none;
-    padding: 1rem 2rem;
-    opacity: 0.5;
-    position: absolute;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-  
-/* Estilos para dispositivos con pantalla mínima de 320px y máxima de 768px */
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 70%;
+}
+.title-principal:hover{
+    cursor: pointer;
+}
+
 @media (min-width: 320px) and (max-width: 900px) {
-    .logo-home {
-      width: 60vw;
-      height: auto;
-      opacity: 0.2;
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
+
+    .contenedor-principalpage {
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .section-logo-home {
-      height: 100vh;
+
+    .contenedor-img-principalpage-1,
+    .contenedor-img-principalpage-2,
+    .contenedor-img-principalpage-3 {
+        height: 33.33%;
+        width: 100%;
+        object-fit: cover;
     }
-    
-    .title-home {
-      font-size: 6rem;
-      top: 49%;
+
+    .contenedor-img-principalpage-1 {
+        background-size: 150%;
+        background-position: -100px;
+
     }
-    
-    .btn-home {
-      font-size: 1.5rem;
-      top: 85%;
+
+    .title-principal {
+        height: 33vh;
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        font-weight: 300;
+        color: #fff;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 0;
     }
-  }
-  
+
+
+}

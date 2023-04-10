@@ -1,21 +1,26 @@
-import React from 'react';
-import './home.css';
+import React from 'react'
+import './home.css'
+import { Link as Anchor } from 'react-router-dom'
+
 
 export default function Home() {
   return (
-    <>
-      <div className='home-section'>
-        <div className="section-logo-home">
-          <img className="logo-home" src="./image/logo.png" alt="Logo" />
-        </div>
-        <section>
-          <h1 className='title-home'>EMPIRE</h1>
-          <button className='btn-home'>LIVE YOUR EXPERIENCE</button>
-        </section>
-        <video className="video-home" loop muted autoPlay>
-          <source src="../../video/autos.mp4" type="video/mp4" />
-        </video>
+    <div >
+      <div className='contenedor-principalpage'>
+        <Anchor to='/vehicles' className='contenedor-img-principalpage-1'>
+          <h1 className='title-principal'>VEHICLES</h1>
+        </Anchor>
+
+        <Anchor to='/art&culture' className='contenedor-img-principalpage-2'>
+          <h1 className='title-principal'>ART & CULTURE</h1>
+        </Anchor>
+
+        <Anchor to='/services' className='contenedor-img-principalpage-3'>
+          <h1 className='title-principal'>SERVICES</h1>
+        </Anchor>
+
+
       </div>
-    </>
+    </div>
   )
 }
