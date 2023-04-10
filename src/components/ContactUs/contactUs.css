@@ -1,0 +1,36 @@
+.bg-contact {
+    width: 100%;
+    height: 100vh;
+    padding-top: 3rem;
+    background-image: url('../../images/contact.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-title-contact img {
+    width: 70%;
+    height: 18rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.div-text-contact {
+    width: 75rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    margin-top: 5rem;
+    margin-left: 20rem;
+    background-color: rgba(0, 0, 0, 0.438);
+
+}
+
+h1 {
+    font-size: 300%;
+    text-align: center;
+    color: white;
+
+}

@@ -49,17 +49,17 @@ export default function Register() {
       </div>
       <div className="div-contact">
         <form className="formcontact" onSubmit={handleSubmit}>
-            <select className="contact" value={category} onChange={handleCategoryChange}>
-              <option className='option' value="select-service">Select Service</option>
-              <option className='option' value="service">Service</option>
-              <option className='option' value="payments">Payments</option>
-              <option className='option' value="sales">Sales</option>
-              <option className='option' value="other">Other</option>
-            </select>
-            <input name="name" className="contact" type="text" value={name} onChange={handleNameChange} placeholder="Name" required />
-            <input name="phone" className="contact" type="number" value={phone} onChange={handlePhoneChange}  placeholder="Phone" required/>
-            <input name="email" className="contact" type="email" value={email} onChange={handleEmailChange}  placeholder="Email" required/>
-            <textarea value={message} onChange={handleMessageChange} />
+          <select className="contact" value={category} onChange={handleCategoryChange}>
+            <option className='option' value="select-service">Select Service</option>
+            <option className='option' value="service">Service</option>
+            <option className='option' value="payments">Payments</option>
+            <option className='option' value="sales">Sales</option>
+            <option className='option' value="other">Other</option>
+          </select>
+          <input name="name" className="contact" type="text" value={name} onChange={handleNameChange} placeholder="Name" required />
+          <input name="phone" className="contact" type="number" value={phone} onChange={handlePhoneChange} placeholder="Phone" required />
+          <input name="email" className="contact" type="email" value={email} onChange={handleEmailChange} placeholder="Email" required />
+          <textarea value={message} onChange={handleMessageChange} />
           <button name="name" className="btncontact" type="submit">Send</button>
         </form>
       </div>
