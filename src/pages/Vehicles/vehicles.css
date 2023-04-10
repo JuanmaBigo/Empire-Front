@@ -1,16 +1,16 @@
 
-.contenedor-servicepage {
+.contenedor-vehiclespage {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/gateway/ownership/s/gate_ownership_s1_03.jpg');
+    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/gateway-family/few-off/hero/countach_hp.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
     overflow-y: hidden;
   }
   
-  .titles-service-page {
+  .titles-vehicles-page {
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -20,13 +20,14 @@
   
   }
   
-  .empire-servicepage-img {
+  .empire-vehiclespage-img {
     width: 80vw;
     height: 35vh;
     margin-right: 5vw;
+    object-fit: contain;
   }
   
-  .btn-servicepage {
+  .btn-vehiclespage {
     width: 10rem;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
@@ -38,7 +39,7 @@
     margin-top: 30vh;
   }
   
-  .section-btn-service {
+  .section-btn-vehicles {
     width: 100vw;
     height: auto;
     display: flex;
@@ -46,7 +47,7 @@
   }
   
   @media (min-width: 300px) and (max-width: 900px) {
-    .titles-service-page {
+    .titles-vehicles-page {
       width: 100vw;
       display: flex;
       flex-direction: column;
@@ -54,14 +55,14 @@
       align-items: center;
       margin-top: 15vh;
     }
-    .empire-servicepage-img {
+    .empire-vehiclespage-img {
         width: 80vw;
         height: 15vh;
         margin-right: 5vw;
       }
    
     
-      .btn-servicepage {
+      .btn-vehiclespage {
         width: 10rem;
         padding: 10px;
         font-family: 'Roboto', sans-serif;

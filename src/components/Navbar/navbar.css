@@ -4,6 +4,7 @@
 .hamburguer-menu{
     width: 3.563rem;
     height: 5.371875vh;
+    object-fit: contain;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

@@ -2,22 +2,45 @@ import React from 'react'
 import './navBody.css'
 import Image from '../Image/Image'
 import closeBtn from '../../images/closeBtn.svg'
+import { Link as Anchor } from 'react-router-dom'
+import apiUrl from '../../configHost'
+import axios from 'axios';
 
 
-export default function NavBody({handleRender}) {
+export default function NavBody({ handleRender }) {
+    let token = localStorage.getItem('token')
+
+    async function handleSignout() {
+        let headers = { headers: { 'Authorization': `Bearer ${token}` } }
+        let url = apiUrl + 'auth/signout'
+        try {
+            await axios.post(url, null, headers)
+                .then(res => {
+                    localStorage.removeItem('token')
+                    localStorage.removeItem('user')
+                })
+            window.location.reload()
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <>
-         <div onClick={handleRender} className='closeBtn'>
-            <Image src={closeBtn} />
-        </div>
-        <div className='navBody'>
-           <h3>HOME</h3>
-           <h3>ART & CULTURE</h3>
-           <h3>VEHICLES</h3>
-           <h3>AI ENGINE</h3>
-           <h3>CART</h3>
-           <h3 className='signout'>SING OUT</h3>
-        </div>
-    </>
+            <div onClick={handleRender} className='closeBtn'>
+                <Image src={closeBtn} />
+            </div>
+            <div className='navBody'>
+                <div className='navBtns'>
+                    <Anchor to='/home' className='header-component'>HOME</Anchor>
+                    <Anchor to='/vehicles' className='header-component'>VEHICLES</Anchor>
+                    <Anchor to='/art&culture' className='header-component'>ART & CULTURE</Anchor>
+                    <Anchor to='/services' className='header-component'>SERVICES</Anchor>
+                    {token === null ? <Anchor to='/signin' className='header-component'>SIGN IN</Anchor> : null}
+                    {token === null ? <Anchor to='/register' className='header-component'>REGISTER</Anchor> : null}
+                </div>
+                {token ? <button className='header-signout' onClick={handleSignout}><p>SIGN OUT</p></button> : null}
+            </div>
+        </>
     )
 }
