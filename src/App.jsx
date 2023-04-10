@@ -18,6 +18,16 @@ import Vehicles from './pages/Vehicles/Vehicles'
 
 
 
+import Register from './pages/Register/Register'
+//import MuseumTour from './pages/TourMuseum/TourMuseum' 
+//import Vehicles from './pages/Vehicles/Vehicles'
+// import Login from './pages/Login/Login'
+//import Contact from './pages/Contact/Contact'
+
+
+
+
+
 
 function App() {
 
@@ -27,15 +37,21 @@ function App() {
 			{/* <Provider store={store}>
 				<RouterProvider router={router} />
 			</Provider> */}
-			{/* <Home/>  */}
-			{/*  <Principal/>  */}
+			{/* <Home/> */}
+			{/* <Principal/> */}
+
+			{/* <Register/> */}
 			{/* <Museum /> */}
-			 <MuseumTour/> 
-			{/* <Service/> */}
+      		 <MuseumTour/> 
+
+			{/* <Register/> */}
+			{/* <Login /> */}
+			{/* <Contact /> */}
+			{/* <Museum /> */}
+			{/*{/* <Service/> */}
 			{/* <Vehicles/> */}
-
 		</>
-
+		
 
 	)
 }

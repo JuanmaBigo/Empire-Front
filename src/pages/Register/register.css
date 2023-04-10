@@ -1,0 +1,116 @@
+.bg-register {
+    width: 100%;
+    height: 100vh;
+    padding-top: 3rem;
+    background-image: url('../../images/bgregister.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bg-title-register img {
+    width: 60%;
+    height: 18rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: contain;
+}
+.div-register {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formRegister {
+    width: 50vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+.register {
+    width: 40vh;
+    height: 5vh;
+    color: white;
+    border: none;
+    border-bottom: 2.5px solid white;
+    background-color: transparent;
+    margin-bottom: 2rem;
+    font-size: x-large;
+    font-weight: bolder;
+    line-height: 0.1;
+}
+.register:focus {
+    outline: none;
+    border-color: black;
+  }
+.btnRegister {
+    width: 20vh;
+    height: 5vh;
+    color: white;
+    background-color: black;
+    font-size: x-large;
+    font-weight: bolder;
+}
+.text-register {
+    width: 100%;
+    height: 3vh;
+    color: gainsboro;
+    margin-bottom: 3vh;
+    padding-left: 5vh;
+    font-size: medium;
+}
+.text-register a {
+    text-decoration: none;
+    color: white;
+    margin-left: 0.3rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .bg-register {
+        padding-top: 0rem;
+    }
+    .bg-title-register {
+        width: 100%;
+    }
+    .bg-title-register img {
+        width: 65%;
+        height: 10rem;
+        margin-left: 5vh;
+    }
+    .formRegister {
+        width: 40vh;
+        height: 55vh;
+    }
+    .register {
+        width: 35vh;
+        height: 5vh;
+        color: white;
+        margin-bottom: 1.5rem;
+        font-size: medium;
+        font-weight: bold;
+    }
+    .btnRegister {
+        width: 15vh;
+        height: 5vh;
+        color: white;
+        background-color: black;
+        font-size: medium;
+        font-weight: bolder;
+    }
+    .text-register {
+        width: 100%;
+        height: 3vh;
+        padding-left: 3vh;
+        font-size: small;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .bg-title-register img {
+        margin-left: 10vh;
+    }
+}
