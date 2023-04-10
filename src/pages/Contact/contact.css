@@ -54,6 +54,9 @@
 .btncontact {
     width: 20vh;
     height: 5vh;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 0.4rem;
     color: white;
     background-color: black;
     font-size: x-large;
