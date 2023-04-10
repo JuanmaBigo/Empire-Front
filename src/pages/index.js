@@ -1,5 +1,4 @@
 import React from 'react'
-
 import MainLayout from '../layouts/MainLayout/MainLayout'
 // import Index from "./Index/Index";
 
@@ -28,8 +27,8 @@ export const router = createBrowserRouter([
         children:[
             // {path:'register',element : <AuthForm />},
             // {path:'signin',element : <AuthForm />},
-            {path:'home',element : <Home />},
-            {path:'principal',element : <Principal/>}
+            // {path:'home',element : <Home />},
+            // {path:'principal',element : <Principal/>}
         ]
     } 
     
