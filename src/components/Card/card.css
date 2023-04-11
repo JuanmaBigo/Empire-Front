@@ -1,0 +1,32 @@
+.container-card {
+    width: 18rem;
+    height: 26rem;
+    background-color: black;
+    padding: 1rem;
+}
+.img {
+    width: 15rem;
+    margin-left: 1.5rem;
+}
+h2 {
+    color: white;
+    margin-left: 4rem;
+}
+h3 {
+    color: white;
+    margin-top: 1.5rem;
+}
+.close {
+    width: 2rem;
+}
+.div-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.btn-close {
+    width: 2rem;
+    margin-left: 2rem;
+    background-color: black;
+    border-radius: 100px;
+}
