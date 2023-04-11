@@ -29,7 +29,6 @@ h1 {
     font-size: 300%;
     text-align: center;
     color: white;
-
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
