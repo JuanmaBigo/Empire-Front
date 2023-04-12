@@ -1,22 +1,9 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout/MainLayout'
-<<<<<<< HEAD
-
-import { Navigate } from 'react-router-dom';
-
-import { createBrowserRouter } from "react-router-dom"
-import Welcome from './Welcome/Welcome';
-import Home from './Home/Home';
-
-import Login from './Login/Login';
-import Register from './Register/Register';
-
-=======
 import Welcome from './Welcome/Welcome';
 import Home from './Home/Home';
 import Login from './Login/Login';
 import Register from './Register/Register';
->>>>>>> 8593b52b0032c9019132017ff062e5e1c3ccd462
 import Museum from './Museum/Museum';
 import MuseumTour from './TourMuseum/TourMuseum';
 import Service from './Service/Service';
@@ -47,7 +34,8 @@ export const router = createBrowserRouter([
             {path:'services/contact', element: <Contact/>},
             {path:'services/contact-us', element: <ContactUs />},
             {path:'vehicles', element: <Vehicles/>},
-            {path:'carrito', element: <Carrito />}
+            {path:'carrito', element: <Carrito />},
+            {path:'select-model', element: <SelectModel/>},
         ]
     } 
     
