@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './customize.css'
+import actionColor from '../../store/color/actions.js';
+const { getAllColors } = actionColor;
 
 export default function Customize() {
+  const dispatch = useDispatch();
+  const color = useSelector((store) => store.model?.cars);
+  //console.log(useSelector((store) => store))
+
+  useEffect(() => {
+  dispatch(getAllColors())
+  }, [dispatch]);
   return (
     <div className='cont-customize'>
       <div className='div-rim'>
@@ -25,7 +35,6 @@ export default function Customize() {
               <img className='color-1' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQcAAADACAMAAAA+71YtAAAAA1BMVEXjABuGu5rPAAAASElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+BsYAAAF7hZJ0AAAAAElFTkSuQmCC'></img>
             </div>
         </div>
-      
     </div>
 
   )

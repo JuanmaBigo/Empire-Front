@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import actions from '../../store/model/actions';
 import actionCat from '../../store/categories/actions';
-
 import './model.css';
 import { Link as Anchor } from 'react-router-dom';
 
