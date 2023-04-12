@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './contact.css';
 import img from '../../images/titlecontact.png';
+import { Link as Anchor } from 'react-router-dom'
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -57,10 +58,11 @@ export default function Register() {
               <option className='option' value="other">Other</option>
             </select>
             <input name="name" className="contact" type="text" value={name} onChange={handleNameChange} placeholder="Name" required />
-            <input name="phone" className="contact" type="number" value={phone} onChange={handlePhoneChange}  placeholder="Phone" required/>
+            <input name="phone" className="contact" type="text" value={phone} onChange={handlePhoneChange}  placeholder="Phone" required/>
             <input name="email" className="contact" type="email" value={email} onChange={handleEmailChange}  placeholder="Email" required/>
             <textarea value={message} onChange={handleMessageChange} />
-          <button name="name" className="btncontact" type="submit">Send</button>
+            <Anchor to='/services/contact-us' className="btncontact">Send</Anchor>
+          {/* <button name="name" className="btncontact" type="submit">Send</button> */}
         </form>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react'
-
 import MainLayout from '../layouts/MainLayout/MainLayout'
+<<<<<<< HEAD
 
 import { Navigate } from 'react-router-dom';
 
@@ -11,12 +11,23 @@ import Home from './Home/Home';
 import Login from './Login/Login';
 import Register from './Register/Register';
 
+=======
+import Welcome from './Welcome/Welcome';
+import Home from './Home/Home';
+import Login from './Login/Login';
+import Register from './Register/Register';
+>>>>>>> 8593b52b0032c9019132017ff062e5e1c3ccd462
 import Museum from './Museum/Museum';
 import MuseumTour from './TourMuseum/TourMuseum';
 import Service from './Service/Service';
 import Vehicles from './Vehicles/Vehicles';
 import Contact from './Contact/Contact'
 import SelectModel from './SelectModel/SelectModel';
+import ContactUs from './ContactUs/ContactUs';
+import Carrito from './Carrito/Carrito';
+
+
+import { createBrowserRouter } from "react-router-dom"
 
 
 //let token = localStorage.getItem('token')
@@ -34,8 +45,9 @@ export const router = createBrowserRouter([
             {path:'art&culture/museum-tour', element: <MuseumTour/>},
             {path:'services', element: <Service/>},
             {path:'services/contact', element: <Contact/>},
+            {path:'services/contact-us', element: <ContactUs />},
             {path:'vehicles', element: <Vehicles/>},
-            {path:'models', element: <SelectModel/>},
+            {path:'carrito', element: <Carrito />}
         ]
     } 
     
