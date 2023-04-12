@@ -208,7 +208,7 @@ img {
     }
 
 }
-@media (min-width: 768px) and (max-width: 1680px) {
+@media (min-width: 768px) and (max-width: 1240px) {
     .photo-vehicles {
         width: 80vw;
         height: 60vh;
