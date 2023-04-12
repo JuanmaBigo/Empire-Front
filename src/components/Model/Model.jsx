@@ -87,7 +87,7 @@ const filteredCars = cars?.filter(car => {
               <button className='btn-slide' onClick={prevSlide}>
                 <img className='img-btn-slide' src="./image/prev.png" alt="Prev" />
               </button>
-              <Anchor className='section-img-title anchortoCustome' to={`/car-details?id=${filteredCars?.[currentIndex]?._id}`}>
+              <Anchor className='section-img-title anchortoCustome' to={`/details/${filteredCars?.[currentIndex]?._id}`}>
                 {photo && (
                   <img
                     className='photo-vehicles'
