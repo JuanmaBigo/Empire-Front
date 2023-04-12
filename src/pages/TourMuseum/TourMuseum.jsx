@@ -6,6 +6,7 @@ import './tourMuseum.css';
 export default function MuseumTour() {
   return (
     <div className='museumtour-section'>
+
       <ReactPlayer
         url='https://www.youtube.com/watch?v=rlbjVAr5SYI&t=8s'
         className='video-museumtour'
