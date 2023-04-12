@@ -12,7 +12,7 @@ import Contact from './Contact/Contact'
 import SelectModel from './SelectModel/SelectModel';
 import ContactUs from './ContactUs/ContactUs';
 import Carrito from './Carrito/Carrito';
-
+import AIEngine from './AIEngine/AIEngine';
 
 import { createBrowserRouter } from "react-router-dom"
 
@@ -41,6 +41,7 @@ export const router = createBrowserRouter([
             {path:'vehicles', element: <Vehicles/>},
             {path:'carrito', element: <Carrito />},
             {path:'select-model', element: <SelectModel/>},
+            {path:'AIEngine', element: <AIEngine />},
         ]
     } 
     
