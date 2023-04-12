@@ -12,6 +12,7 @@ import Contact from './Contact/Contact'
 import SelectModel from './SelectModel/SelectModel';
 import ContactUs from './ContactUs/ContactUs';
 import Carrito from './Carrito/Carrito';
+import Resume from './Resume/Resume';
 
 
 import { createBrowserRouter } from "react-router-dom"
@@ -36,6 +37,7 @@ export const router = createBrowserRouter([
             {path:'vehicles', element: <Vehicles/>},
             {path:'carrito', element: <Carrito />},
             {path:'select-model', element: <SelectModel/>},
+            {path:'customize', element: <Resume />}
         ]
     } 
     
