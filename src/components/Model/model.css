@@ -1,0 +1,318 @@
+.photo-vehicles {
+    width: 50vw;
+    height: 60vh;
+}
+
+.contenedor-vehicles {
+    background: rgb(237, 237, 237);
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.section-filter {
+    width: 100%;
+    height: 15vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-name {
+    width: 100%;
+    height: 20vh;
+}
+
+.select-option {
+    width: 100%;
+    height: 10vh;
+
+}
+
+.img-btn-slide {
+    width: 5vw;
+    height: auto;
+}
+
+.contenedor-vehicles-carrusel {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-slide {
+    height: 3rem;
+    margin-top: 30%;
+    border: none;
+}
+
+.section-img-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.title-name-car {
+    width: auto;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.anchortoCustome {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: none;
+}
+
+.search-input {
+    width: 15vw;
+    height: 5vh;
+    background: rgba(0, 0, 0, 0.32);
+    color: white;
+    border: none;
+    margin-left: 20vh;
+    margin-top: 25vh;
+    position: relative;
+    z-index: 1;
+}
+
+.select-input {
+    width: 15vw;
+    height: 5vh;
+    background: rgba(0, 0, 0, 0.32);
+    color: white;
+    border: none;
+    margin-left: 20vh;
+    margin-top: 12vh;
+    position: relative;
+    z-index: 0;
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .photo-vehicles {
+        width: 80vw;
+        height: 40vh;
+        margin-top: -10vh;
+    }
+
+    .contenedor-vehicles {
+        background: rgb(237, 237, 237);
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .section-filter {
+        width: 100%;
+        height: 15vh;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .search-name {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .select-option {
+        width: 100%;
+        height: 10vh;
+
+    }
+
+    .img-btn-slide {
+        width: 5vw;
+        height: auto;
+        margin-top: 31vh;
+    }
+
+    .contenedor-vehicles-carrusel {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+    }
+
+    .btn-slide {
+        height: 3rem;
+        margin-top: 30%;
+        border: none;
+    }
+
+    .section-img-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin-top: 10vh;
+    }
+
+    .title-name-car {
+        width: auto;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        color: #000;
+    }
+
+    .anchortoCustome {
+        text-decoration: none;
+        color: #000;
+    }
+
+    img {
+        border: none;
+    }
+
+    .search-input {
+        width: 80vw;
+        height: 5vh;
+        background: rgba(0, 0, 0, 0.32);
+        color: white;
+        border: none;
+        margin-left: 5vh;
+        margin-top: 25vh;
+        position: relative;
+        z-index: 1;
+    }
+
+    .select-input {
+        width: 80vw;
+        height: 5vh;
+        background: rgba(0, 0, 0, 0.32);
+        color: white;
+        border: none;
+        margin-left:5vh;
+        margin-top: 12vh;
+        position: relative;
+        z-index: 0;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1240px) {
+    .photo-vehicles {
+        width: 80vw;
+        height: 60vh;
+        margin-top: -20vh;
+    }
+
+    .contenedor-vehicles {
+        background: rgb(237, 237, 237);
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .section-filter {
+        width: 100%;
+        height: 15vh;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .search-name {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .select-option {
+        width: 100%;
+        height: 10vh;
+
+    }
+
+    .img-btn-slide {
+        width: 5vw;
+        height: auto;
+        margin-top: 20vh;
+    }
+
+    .contenedor-vehicles-carrusel {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+    }
+
+    .btn-slide {
+        height: 3rem;
+        margin-top: 30%;
+        border: none;
+    }
+
+    .section-img-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin-top: 10vh;
+    }
+
+    .title-name-car {
+        width: auto;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: #000;
+    }
+
+    .anchortoCustome {
+        text-decoration: none;
+        color: #000;
+    }
+
+    img {
+        border: none;
+    }
+
+    .search-input {
+        width: 90vw;
+        height: 5vh;
+        background: rgba(0, 0, 0, 0.32);
+        color: white;
+        border: none;
+        margin-left: 5vh;
+        margin-top: 25vh;
+        position: relative;
+        z-index: 1;
+    }
+
+    .select-input {
+        width: 90vw;
+        height: 5vh;
+        background: rgba(0, 0, 0, 0.32);
+        color: white;
+        border: none;
+        margin-left:5vh;
+        margin-top: 12vh;
+        position: relative;
+        z-index: 0;
+    }
+
+}

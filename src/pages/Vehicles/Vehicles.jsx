@@ -1,5 +1,6 @@
 import React from 'react'
 import './vehicles.css'
+import { Link as Anchor } from 'react-router-dom'
 
 export default function Vehicles() {
   return (
@@ -8,9 +9,9 @@ export default function Vehicles() {
           <img className='empire-vehiclespage-img' src='./image/title-empire-vehicles.png' alt='title vehicle' />
         </div>
         <div className='section-btn-vehicles'>
-          {/*     <Anchor to='/form-contact'> */}
+         <Anchor to='/select-model'> 
           <button className='btn-vehiclespage'>SHOW ALL</button>
-          {/*  </Anchor> */}
+         </Anchor> 
         </div>
       </div>
   )

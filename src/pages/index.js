@@ -9,8 +9,11 @@ import MuseumTour from './TourMuseum/TourMuseum';
 import Service from './Service/Service';
 import Vehicles from './Vehicles/Vehicles';
 import Contact from './Contact/Contact'
+import SelectModel from './SelectModel/SelectModel';
 import ContactUs from './ContactUs/ContactUs';
 import Details from './Details/Details';
+import Carrito from './Carrito/Carrito';
+
 
 import { createBrowserRouter } from "react-router-dom"
 
@@ -33,6 +36,8 @@ export const router = createBrowserRouter([
             {path:'services/contact-us', element: <ContactUs />},
             {path:'vehicles', element: <Vehicles/>},
             {path:'details',element:<Details/>},
+            {path:'carrito', element: <Carrito />},
+            {path:'select-model', element: <SelectModel/>},
         ]
     } 
     
