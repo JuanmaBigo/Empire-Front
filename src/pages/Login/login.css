@@ -1,12 +1,13 @@
 .bg-login {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 3rem;
-    background-image: url('../../images/bglogin.png');
+    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/gateway_urus/performante/2022/s/urus_perfo_s_02.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
 .bg-title-login img {
     width: 100%;
     height: 18rem;
@@ -14,6 +15,7 @@
     background-size: contain;
     object-fit: contain;
 }
+
 .div-login {
     width: 100%;
     height: 60vh;
@@ -21,10 +23,12 @@
     justify-content: flex-end;
     align-items: center;
 }
+
 .formlogin {
-    width: 50vh;
-    height: 50vh;
-    margin-right: 30vh;
+    width: 369px;
+    margin-right: 10vw;
+    padding-top: 80px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,116 +37,92 @@
 }
 
 .login {
-    width: 40vh;
-    height: 5vh;
+    width: 80%;
     color: white;
     border: none;
     border-bottom: 2.5px solid white;
     background-color: transparent;
-    margin-bottom: 4rem;
-    font-size: x-large;
-    font-weight: bolder;
+    font-size: 18px;
+    font-weight: 600;
     line-height: 0.1;
 }
+
+.email{
+    margin-bottom: 80px;
+}
+
+.password{
+    margin-bottom: 15px;
+}
+
 ::placeholder {
-    color: white;
-  }
+    opacity: 0.7;
+}
+
 .login:focus {
     outline: none;
-    border-color: black;
-  }
-.btnlogin {
-    width: 20vh;
-    height: 5vh;
-    color: white;
-    background-color: black;
-    font-size: x-large;
-    font-weight: bolder;
 }
+
+.btnLogin {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 46px;
+    border: none;
+}
+.btnLogin:hover{
+    cursor: pointer;
+}
+
 .text-login {
-    width: 100%;
-    height: 3vh;
-    color: gainsboro;
-    margin-bottom: 3vh;
-    padding-left: 5vh;
-    font-size: medium;
+    width: 80%;
+    display: flex;
+    color: white;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 400;
 }
+
+.text-login p{
+    opacity: 0.7;
+}
+
 .text-login a {
     text-decoration: none;
     color: white;
     margin-left: 0.3rem;
+    font-weight: 600;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
-    .bg-login {
-        padding-top: 0rem;
+@media screen and (max-width: 767px) {
+    .bg-login{
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
-    .bg-title-login {
-        width: 100%;
-    }
-    .bg-title-login img {
-        width: 70%;
-        height: 13rem;
-        margin-left: 5vh;
-    }
-    .formlogin {
-        width: 40vh;
-        height: 55vh;
-        margin-right: 8vh;
-    }
-    .login {
-        width: 35vh;
-        height: 5vh;
-        color: white;
-        margin-bottom: 1.5rem;
-        font-size: medium;
-        font-weight: bold;
-        margin-bottom: 2rem;
-    }
-    .btnlogin {
-        width: 15vh;
-        height: 5vh;
-        color: white;
-        background-color: black;
-        font-size: medium;
-        font-weight: bolder;
-    }
-    .text-login {
-        width: 100%;
-        height: 3vh;
-        padding-left: 3vh;
-        font-size: small;
-    }
-}
+    .bg-title-login{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
 
-@media (min-width: 768px) and (max-width: 1023px) {
-    .bg-login {
-        padding-top: 1rem;
     }
     .bg-title-login img {
-        width: 80%;
-        height: 15rem;
-        background-repeat: no-repeat;
-        background-size: contain;
-        object-fit: contain;
-        padding-left: 8rem;
-    }
-    .formlogin {
-        width: 50vh;
-        height: 45vh;
-        margin-right: 15vh;
+        width: 90%;
+        margin: 0;
+        height: 10rem;
     }
     .div-login {
-        width: 100%;
-        height: 50vh;
+        height: fit-content;
+        justify-content: center !important;
+        align-items: baseline;
     }
-    .login {
-        margin-bottom: 2rem;
-        font-size: large;
-    }
-    .btnlogin {
-        font-size: large;
-        font-weight: bolder;
-        margin-top: 2rem;
+    .formlogin{
+        margin: 0;
+        max-width: 90vw;
+        margin-bottom: 7rem;
     }
 }

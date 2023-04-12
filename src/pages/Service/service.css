@@ -1,30 +1,68 @@
 .contenedor-servicepage {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/face_react/ad_personam/cross/cross_01.jpg');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    overflow-y: hidden;
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/face_react/connectivity/landing/s/connected_car_s_02.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.titles-service-page {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+
+}
+
+.empire-servicepage-img {
+  width: 80vw;
+  height: 40vh;
+  margin-right: 5vw;
+  object-fit: contain;
+}
+
+.btn-servicepage {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  margin-top: 30vh;
+  font-weight: 600;
+}
+
+.section-btn-service {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 300px) and (max-width: 900px) {
   .titles-service-page {
     width: 100vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
-  
   }
-  
+
   .empire-servicepage-img {
     width: 80vw;
-    height: 40vh;
+    height: 20vh;
     margin-right: 5vw;
   }
-  
+
+
   .btn-servicepage {
     width: 10rem;
     padding: 10px;
@@ -34,42 +72,7 @@
     color: #fff;
     background-color: #000;
     border: none;
-    margin-top: 30vh;
+    margin-top: 40vh;
   }
-  
-  .section-btn-service {
-    width: 100vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-  }
-  
-  @media (min-width: 300px) and (max-width: 900px) {
-    .titles-service-page {
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10vh;
-    }
-    .empire-servicepage-img {
-        width: 80vw;
-        height: 20vh;
-        margin-right: 5vw;
-      }
-   
-    
-      .btn-servicepage {
-        width: 10rem;
-        padding: 10px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #fff;
-        background-color: #000;
-        border: none;
-        margin-top: 40vh;
-      }
-      
-  }
+
+}

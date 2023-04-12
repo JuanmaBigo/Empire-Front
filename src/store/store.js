@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import textReducer from './search/reducer'
-// import checkReducer from './checks/reducer'
+import modelReducer from "../store/model/reducer.js";
+import categoriesReducer from "../store/categories/reducer.js"
 
 export const store = configureStore({
-    reducer:{
-        // text: textReducer,
-        // checks: checkReducer, 
+    reducer:{ 
+        model : modelReducer,
+        category: categoriesReducer,
     }
 })
