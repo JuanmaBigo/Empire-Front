@@ -63,6 +63,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #000;
 }
 
 .anchortoCustome {
@@ -170,6 +171,7 @@ img {
         justify-content: center;
         align-items: center;
         font-size: 1rem;
+        color: #000;
     }
 
     .anchortoCustome {
@@ -206,7 +208,7 @@ img {
     }
 
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1680px) {
     .photo-vehicles {
         width: 80vw;
         height: 60vh;
@@ -277,6 +279,7 @@ img {
         justify-content: center;
         align-items: center;
         font-size: 2rem;
+        color: #000;
     }
 
     .anchortoCustome {
