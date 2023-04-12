@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
             {path:'services/contact', element: <Contact/>},
             {path:'services/contact-us', element: <ContactUs />},
             {path:'vehicles', element: <Vehicles/>},
-            {path:'details',element:<Details/>},
+            {path:'details/:id',element:<Details/>},
             {path:'carrito', element: <Carrito />},
             {path:'select-model', element: <SelectModel/>},
         ]
