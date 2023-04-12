@@ -11,6 +11,7 @@ import Vehicles from './Vehicles/Vehicles';
 import Contact from './Contact/Contact'
 import SelectModel from './SelectModel/SelectModel';
 import ContactUs from './ContactUs/ContactUs';
+import Details from './Details/Details';
 import Carrito from './Carrito/Carrito';
 
 
@@ -34,6 +35,7 @@ export const router = createBrowserRouter([
             {path:'services/contact', element: <Contact/>},
             {path:'services/contact-us', element: <ContactUs />},
             {path:'vehicles', element: <Vehicles/>},
+            {path:'details/:id',element:<Details/>},
             {path:'carrito', element: <Carrito />},
             {path:'select-model', element: <SelectModel/>},
         ]
