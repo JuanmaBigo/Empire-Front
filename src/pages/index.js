@@ -18,10 +18,15 @@ import { createBrowserRouter } from "react-router-dom"
 
 export const router = createBrowserRouter([
     {
+        path: '/',
+        children: [
+            { path: '', element: <Welcome /> },
+        ]
+    },
+    {
         path:'/',
         element: <MainLayout/>,
         children:[
-            {path:'', element: <Welcome />},
             {path:'home', element: <Home/>},
             {path:'register', element: <Register />},
             {path:'signin', element: <Login />},
