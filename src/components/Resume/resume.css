@@ -1,0 +1,142 @@
+/* .contain-resume {
+    display: flex;
+    height: 100vh;
+}
+.container-detail-car {
+    width: 75rem;
+    height: 100vh;
+    padding: 8rem;
+}
+.container-detail-car h1 {
+    font-size: 80px;
+}
+.container-detail-pay {
+    width: 40rem;
+    height: 100vh;
+    background-color: black;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.img {
+    width: 50rem;
+}
+.color {
+    color: black;
+}
+.div-detail-pay {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+.div-detail-pay h2 {
+    margin-left: 15rem;
+}
+.btn-add-car {
+    width: 25rem;
+    height: 4rem;
+    margin-left: 6rem;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .contain-resume {
+        display: flex;
+        flex-direction: column;
+    }
+} */
+
+.contain-resume {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .container-detail-car {
+    width: 75%;
+    max-width: 75rem;
+    height: 100%;
+    padding: 8%;
+  }
+  
+  .container-detail-car h1 {
+    font-size: 6vw;
+  }
+  
+  .container-detail-pay {
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    background-color: black;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .img {
+    width: 100%;
+    max-width: 50rem;
+  }
+  
+  .color {
+    color: black;
+  }
+  
+  .div-detail-pay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 3vw;
+  }
+  
+  .div-detail-pay h2 {
+    margin-left: 5%;
+  }
+  
+  .btn-add-car {
+    width: 100%;
+    max-width: 25rem;
+    height: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    font-size: 3vw;
+    font-weight: 600;
+  }
+  
+  /* Media queries */
+  
+  @media (max-width: 768px) {
+    .contain-resume {
+      flex-direction: column;
+    }
+    
+    .container-detail-car {
+      width: 100%;
+    }
+    
+    .container-detail-car h1 {
+      font-size: 8vw;
+    }
+    
+    .container-detail-pay {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .img {
+      max-width: 100%;
+    }
+    
+    .div-detail-pay {
+      font-size: 5vw;
+    }
+    
+    .btn-add-car {
+      max-width: 100%;
+      font-size: 5vw;
+    }
+  }
