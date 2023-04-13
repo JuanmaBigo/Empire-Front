@@ -36,7 +36,8 @@ export default function NavBody({ handleRender }) {
                     <Anchor to='/vehicles' className='header-component'>VEHICLES</Anchor>
                     <Anchor to='/art&culture' className='header-component'>ART & CULTURE</Anchor>
                     <Anchor to='/services' className='header-component'>SERVICES</Anchor>
-                    {token === null ? <Anchor to='/signin' className='header-component'>SIGN IN</Anchor> : null}
+                    <Anchor to='/AIEngine' className='header-component'>AI ENGINE</Anchor>
+                    {token === null ? <Anchor to='/signin' className='header-component'>LOGIN</Anchor> : null}
                     {token === null ? <Anchor to='/register' className='header-component'>REGISTER</Anchor> : null}
                 </div>
                 {token ? <button className='header-signout' onClick={handleSignout}><p>SIGN OUT</p></button> : null}

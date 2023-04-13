@@ -1,0 +1,219 @@
+.AI {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/img/AI-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.AI-page {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.background-alert {
+    background-color: rgba(63, 55, 47, 0.5);
+    background-blend-mode: multiply;
+}
+
+.AI-container {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.AI-title {
+    font-size: 3rem;
+    width: 590px;
+    color: white;
+    text-align: left;
+    padding-left: 0.8rem;
+    background-color: #070707;
+    opacity: 0.74;
+}
+
+.AI-form {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-area-AI {
+    width: 700px;
+    background-color: #2D2D2D;
+    opacity: 0.65;
+    padding: 1rem;
+    height: 300px;
+    font-size: 1.5rem;
+}
+
+.text-area-AI:focus {
+    outline: none;
+}
+
+.text-area-AI::placeholder {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.AI-button {
+    margin-top: 45px;
+    width: fit-content;
+    background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    box-shadow: #070707 0px 0px 3px;
+    transition: all 250ms linear;
+}
+
+.AI-button:hover {
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+}
+
+.alert-AI-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem 1.5rem 1rem;
+    z-index: 100;
+    background-color: #070707;
+    width: 50rem;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.text-alert-AI {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+
+.alert-AI-btn {
+    font-size: 1.2rem;
+    border: none;
+    background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
+    color: rgba(255, 255, 255, 0.658);
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    transition: all 250ms linear;
+}
+
+.alert-AI-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #48484b 0%, rgba(37, 37, 37, 0.747) 100%);
+    color: rgb(255, 255, 255);
+}
+
+.alert-AI-btn-close {
+    align-self: flex-end;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
+    color: rgba(255, 255, 255, 0.658);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.close-alert-icon-AI {
+    width: 100%;
+    height: 100%;
+}
+
+.alert-AI-btn-close:hover {
+    cursor: pointer;
+}
+
+.spinner {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@media screen and (max-width: 860px) {
+    .AI-container {
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    .AI-page {
+        justify-content: center;
+    }
+
+    .AI-title {
+        width: 70vw;
+        font-size: 2rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .AI-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-area-AI {
+        width: 90vw;
+        height: 20rem;
+        font-size: 1.2rem;
+    }
+
+    .text-area-AI::placeholder {
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .AI-form {
+        align-items: center;
+    }
+
+    .alert-AI-container {
+        width: 90vw;
+    }
+
+    .AI-button {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .AI-title {
+        font-size: 1.5rem;
+    }
+
+    .text-area-AI {
+        width: 90vw;
+        height: 20rem;
+        font-size: 1rem;
+    }
+
+    .text-area-AI::placeholder {
+        color: white;
+        font-size: 1rem;
+    }
+}
