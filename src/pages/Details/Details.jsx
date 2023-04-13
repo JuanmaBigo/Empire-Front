@@ -29,9 +29,12 @@ const Details=()=>{
     <div className='mainDetails'>
     <div className='firstDetails'>
       <div className='mainDetails'>
-        <img src={auto} alt="" className='photoDetails' />
+        <video className='photoDetails' loop muted autoPlay>
+          <source  src={data.video} type='video/mp4' />
+        </video>
+        
         <h1 className='detailsTitle'>{data.name}</h1>
-        <Anchor to="#" className="Detailsbtn"> Build your {data.name} </Anchor>
+        <Anchor to="#" className="Detailsbtn"> Build your {data.name} </Anchor> 
       </div>
       <div className='speedDetails'>
         <div className='carDetails'> 
@@ -70,7 +73,9 @@ const Details=()=>{
       <div className='Btn'>
          <Anchor to="#" className="lastBtn"> Build your {data.name} </Anchor>
       </div>
-     
+      
+
+      
     </div>
   )
 
