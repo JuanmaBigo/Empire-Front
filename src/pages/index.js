@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
             {path:'details/:id',element:<Details/>},
             {path:'carrito', element: <Carrito />},
             {path:'select-model', element: <SelectModel/>},
-            {path:'customize', element: <Custome/>},
+            {path:'customize/:id', element: <Custome/>},
         ]
     } 
     
