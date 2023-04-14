@@ -16,6 +16,7 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 2.5rem;
+  color: white;
 }
 
 .speedDetails {
@@ -37,11 +38,16 @@
   align-items: center;
   height: 20%;
   color: white;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .carDetails h3 {
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.carDetails p{
+  font-weight: 200;
+  font-size: 1.1rem;
 }
 
 .Detailsbtn {
@@ -234,6 +240,19 @@
   }
 
   .carDetails {
-    margin-left: 2rem;
+    padding-left: 2rem;
+  }
+  .text-details-cars{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 300px;
+  }
+  .text-details-cars p{
+    font-size: 1rem;
+  }
+  .text-details-cars h3{
+    font-size: 1rem;
   }
 }

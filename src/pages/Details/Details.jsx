@@ -42,17 +42,23 @@ const Details = () => {
             <div className='speedDetails'>
               <div className='carDetails'>
                 <img src={motor} alt="" />
-                <h3>POWER: {data.hp}CV</h3>
+                <div className='text-details-cars'>
+                  <h3>POWER: </h3><p>{data.hp}CV</p>
+                </div>
               </div>
               <div className='carDetails'>
                 <img src={velocimeter} alt="" />
-                <h3>MAX. SPEED: {data.top_speed}Km/h</h3>
+                <div className='text-details-cars'>
+                  <h3>MAX. SPEED: </h3><p>{data.top_speed}Km/h</p>
+                </div>
               </div>
               <div className='carDetails'>
                 <img src={aceleration} alt="" />
-                <h3>0-100 km/h: {data.acceleration}s</h3>
+                <div className='text-details-cars'>
+                  <h3>0-100 km/h: </h3><p>{data.acceleration}s</p>
+                </div>
               </div>
-              
+
             </div>
           </div>
           <div className='textDetails'>
