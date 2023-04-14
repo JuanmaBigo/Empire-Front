@@ -1,6 +1,17 @@
 .photo-vehicles {
     width: 50vw;
     height: 60vh;
+    object-fit: cover;
+}
+
+.vehicles-title {
+    position: absolute;
+    right: 20vh;
+    top: 16vh;
+    color: white;
+    background: rgba(0, 0, 0, 0.74);
+    padding: 1.5rem 2rem 1.5rem 4rem;
+    font-size: 1.1rem;
 }
 
 .contenedor-vehicles {
@@ -14,7 +25,6 @@
 .section-filter {
     width: 100%;
     height: 15vh;
-    background: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,6 +59,10 @@
     border: none;
 }
 
+.btn-slide:hover {
+    cursor: pointer;
+}
+
 .section-img-title {
     display: flex;
     flex-direction: column;
@@ -57,13 +71,24 @@
     text-align: center;
 }
 
+.no-match-search {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+    box-shadow: #000 0px 0px 3px;
+}
+
 .title-name-car {
     width: auto;
-    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #000;
+    text-transform: uppercase;
+
 }
 
 .anchortoCustome {
@@ -71,248 +96,154 @@
     color: #000;
 }
 
-img {
-    border: none;
-}
 
 .search-input {
-    width: 15vw;
+    width: 30vw;
     height: 5vh;
-    background: rgba(0, 0, 0, 0.32);
+    background: rgba(0, 0, 0, 0.74);
     color: white;
     border: none;
     margin-left: 20vh;
     margin-top: 25vh;
     position: relative;
     z-index: 1;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-left: 0.5rem;
+}
+
+.search-input:focus {
+    outline: none;
 }
 
 .select-input {
     width: 15vw;
     height: 5vh;
-    background: rgba(0, 0, 0, 0.32);
-    color: white;
+    background: rgba(0, 0, 0, 0.74);
+    color: rgba(255, 255, 255, 0.74);
     border: none;
     margin-left: 20vh;
     margin-top: 12vh;
+    font-size: 18px;
     position: relative;
     z-index: 0;
+    padding-left: 0.1rem;
+    text-transform: uppercase;
 }
 
+.select-input:focus {
+    outline: none;
+}
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 1300px) {
+    .search-input {
+        margin-left: 10vh;
+    }
+
+    .select-input {
+        margin-left: 10vh;
+    }
+
+    .vehicles-title {
+        right: 10vh;
+    }
+
     .photo-vehicles {
-        width: 80vw;
-        height: 40vh;
-        margin-top: -10vh;
+        width: 600px;
+        height: 600px;
     }
 
-    .contenedor-vehicles {
-        background: rgb(237, 237, 237);
-        width: 100%;
-        height: 100vh;
-        overflow-x: hidden;
-        overflow-y: hidden;
+}
+
+@media screen and (max-width: 1080px) {
+    .search-input {
+        margin-left: 5vh;
     }
 
-    .section-filter {
-        width: 100%;
-        height: 15vh;
-        background: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .select-input {
+        margin-left: 5vh;
     }
 
-    .search-name {
-        width: 100%;
-        height: 20vh;
+    .vehicles-title {
+        right: 5vh;
     }
 
-    .select-option {
-        width: 100%;
-        height: 10vh;
-
+    .photo-vehicles {
+        width: 600px;
+        height: 600px;
     }
-
-    .img-btn-slide {
-        width: 5vw;
-        height: auto;
-        margin-top: 31vh;
+    .btn-slide{
+        height: 2rem;
+        position: relative;
+        bottom: -20rem;
     }
+}
 
-    .contenedor-vehicles-carrusel {
-        width: 100vw;
-        height: auto;
-        display: flex;
-        justify-content: space-around;
-        margin-top: 20vh;
-    }
-
-    .btn-slide {
-        height: 3rem;
-        margin-top: 30%;
-        border: none;
-    }
-
-    .section-img-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-        margin-top: 10vh;
-    }
-
-    .title-name-car {
-        width: auto;
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+@media screen and (max-width: 767px) {
+    .vehicles-title {
         font-size: 1rem;
-        color: #000;
+        left: 0;
+        right: 0;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 1.2rem;
     }
-
-    .anchortoCustome {
-        text-decoration: none;
-        color: #000;
+    .photo-vehicles{
+        margin-top: 11rem;
+        width: 70vw;
+        height: 35vh;
     }
-
-    img {
-        border: none;
-    }
-
     .search-input {
-        width: 80vw;
-        height: 5vh;
-        background: rgba(0, 0, 0, 0.32);
-        color: white;
-        border: none;
-        margin-left: 5vh;
-        margin-top: 25vh;
-        position: relative;
-        z-index: 1;
+        margin-top: 21rem;
+        width: 20rem;
+        font-size: 15px;
     }
-
     .select-input {
-        width: 80vw;
-        height: 5vh;
-        background: rgba(0, 0, 0, 0.32);
-        color: white;
-        border: none;
-        margin-left:5vh;
-        margin-top: 12vh;
-        position: relative;
-        z-index: 0;
+        margin-top: 13rem;
+        width: 10rem;
+        padding: 0.2rem;
+        font-size: 15px;
     }
-
+    
 }
-@media (min-width: 768px) and (max-width: 1240px) {
-    .photo-vehicles {
-        width: 80vw;
-        height: 60vh;
-        margin-top: -20vh;
+
+@media screen and (max-width: 767px) {
+    .vehicles-title {
+        font-size: 1rem;
+        left: 0;
+        right: 0;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 1.2rem;
     }
-
-    .contenedor-vehicles {
-        background: rgb(237, 237, 237);
-        width: 100%;
-        height: 100vh;
-        overflow-x: hidden;
-        overflow-y: hidden;
+    .photo-vehicles{
+        margin-top: 11rem;
+        width: 90vw;
+        height: 30vh;
     }
-
-    .section-filter {
-        width: 100%;
-        height: 15vh;
-        background: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .search-name {
-        width: 100%;
-        height: 20vh;
-    }
-
-    .select-option {
-        width: 100%;
-        height: 10vh;
-
-    }
-
-    .img-btn-slide {
-        width: 5vw;
-        height: auto;
-        margin-top: 20vh;
-    }
-
-    .contenedor-vehicles-carrusel {
-        width: 100vw;
-        height: auto;
-        display: flex;
-        justify-content: space-around;
-        margin-top: 20vh;
-    }
-
-    .btn-slide {
-        height: 3rem;
-        margin-top: 30%;
-        border: none;
-    }
-
-    .section-img-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-        margin-top: 10vh;
-    }
-
-    .title-name-car {
-        width: auto;
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        color: #000;
-    }
-
-    .anchortoCustome {
-        text-decoration: none;
-        color: #000;
-    }
-
-    img {
-        border: none;
-    }
-
     .search-input {
-        width: 90vw;
-        height: 5vh;
-        background: rgba(0, 0, 0, 0.32);
-        color: white;
-        border: none;
-        margin-left: 5vh;
-        margin-top: 25vh;
-        position: relative;
-        z-index: 1;
+        margin-top: 21rem;
+        width: 20rem;
+        font-size: 15px;
     }
-
     .select-input {
-        width: 90vw;
-        height: 5vh;
-        background: rgba(0, 0, 0, 0.32);
-        color: white;
-        border: none;
-        margin-left:5vh;
-        margin-top: 12vh;
-        position: relative;
-        z-index: 0;
+        margin-top: 13rem;
+        width: 10rem;
+        padding: 0.2rem;
+        font-size: 15px;
     }
-
+    .img-btn-slide1{
+        height: 3rem;
+        width: 3rem;
+        position: absolute;
+        left: 0;
+        object-fit: contain;
+    }
+    .img-btn-slide2{
+        height: 3rem;
+        width: 3rem;
+        position: absolute;
+        right: 0;
+        object-fit: contain;
+    }
 }

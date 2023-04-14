@@ -44,9 +44,6 @@ export default function Model() {
 const filteredCars = cars?.filter(car => {
     const categoryIdMatch = searchFilters.selectedCategory === '' || car?.category_id._id.toString() === searchFilters.selectedCategory.toString();
     const nameMatch = car.name.toLowerCase().includes(searchFilters.searchTerm.toLowerCase());
-
-    console.log('car:', car, 'categoryIdMatch:', categoryIdMatch, 'nameMatch:', nameMatch);
-
     return categoryIdMatch && nameMatch;
 });
 
@@ -56,12 +53,15 @@ const filteredCars = cars?.filter(car => {
 
       return (
         <div className='contenedor-vehicles'>
+        <div className='vehicles-title'>
+          <h1>MODEL SELECTION</h1>
+        </div>
           <div className='section-filter'>
             <div className='search-name'>
               <input
                 className='search-input'
                 type="text"
-                placeholder="  Search"
+                placeholder="FILTER BY NAME"
                 value={searchFilters.searchTerm}
                 onChange={(e) => setSearchFilters({ ...searchFilters, searchTerm: e.target.value })}
               />
@@ -72,7 +72,7 @@ const filteredCars = cars?.filter(car => {
                 value={searchFilters.selectedCategory}
                 onChange={(e) => setSearchFilters({ ...searchFilters, selectedCategory: e.target.value })}
               >
-                <option value="">All</option>
+                <option value="">category</option>
                 {categories?.map((category) => (
                   <option key={category?._id} value={category?._id}>{category?.name}</option>
                 ))}
@@ -81,12 +81,12 @@ const filteredCars = cars?.filter(car => {
           </div>
           {filteredCars.length === 0 ? (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
-              <p>Sorry, there is no vehicle that matches your search.</p>
+              <p className='no-match-search'>There is no vehicle that matches your search</p>
             </div>
           ) : (
             <div className='contenedor-vehicles-carrusel'>
               <button className='btn-slide' onClick={prevSlide}>
-                <img className='img-btn-slide' src="./image/prev.png" alt="Prev" />
+                <img className='img-btn-slide img-btn-slide1' src="./image/prev.png" alt="Prev" />
               </button>
               <Anchor className='section-img-title anchortoCustome' to={`/details/${filteredCars?.[currentIndex]?._id}`}>
                 {photo && (
@@ -103,7 +103,7 @@ const filteredCars = cars?.filter(car => {
                 )}
               </Anchor>
               <button className='btn-slide' onClick={nextSlide}>
-                <img className='img-btn-slide' src="./image/next.png" alt="Next" />
+                <img className='img-btn-slide img-btn-slide2' src="./image/next.png" alt="Next" />
               </button>
             </div>
           )}
