@@ -4,53 +4,69 @@ import './customize.css'
 import actionColor from '../../store/color/actions.js';
 import { useParams } from "react-router"
 import carActions from "../../store/model/actions.js"
+import rimsActions from "../../store/rims/actions.js"
 const { getAllColors } = actionColor;
-const { getOne } = carActions
+const { getOne } = carActions;
+const { getAllRims } = rimsActions;
 
 export default function Customize() {
   const dispatch = useDispatch();
-  const color = useSelector((store) => store.model?.cars);
-  //console.log(useSelector((store) => store))
-  useEffect(() => {
-  dispatch(getAllColors())
-  }, [dispatch]);
-
+  const color = useSelector((store) => store.colors.colors);
   const data = useSelector((store) => store.model?.car)
-
-  //console.log(data)
+  const rim = useSelector((store) => store.rim?.rim)
+  console.log(rim)
+  const colorsArray = color ? Object.values(color) : [];
+  const rimsArray = rim ? Object.values(rim) : [];
+  const [selectedColorId, setSelectedColorId] = useState(null);
+  const [selectedRimId, setSelectedRimId] = useState(null);
   const params = useParams()
+/* 
+  const color_id = rim?.rim?.color_id
+
+  const rimColor = color?.Find((evento) => rim?.color_id === evento?._id)
+  console.log(rimColor) */
+
+
   useEffect(() => {
-    if (data) {
-      dispatch(getOne({ _id: params.id }))
-    }
-  }, [])
+    dispatch(getOne({ _id: params.id }))
+    dispatch(getAllColors(params.id))
+  }, [dispatch])
 
-
+/*   useEffect(() => {
+    dispatch(getAllRims(rim))
+  }, [dispatch]) */
 
   return (
     <div className='cont-customize'>
-      <div className='div-rim'>
-      <h2 className='title-rim'>Select Rim</h2>
-            <div className='section-rim'>
-              <img className='rim-1' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQcAAADACAMAAAA+71YtAAAAA1BMVEXjABuGu5rPAAAASElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+BsYAAAF7hZJ0AAAAAElFTkSuQmCC'></img>
-            </div>
-            <h2 className='title-rim'>Select Rim</h2>
+      <div className='section-prev-custom'>
+        <div className='title-customize'>
+          <img className='img-title-makeIt' src="../image/title-makeIt.png" alt="make it" />
+        </div>
+        <div className='contenedor-img-car'>
+          <img className="img-config" src={selectedColorId ? data?.photos[selectedColorId] : data?.photo} alt="make it" />
+        </div>
       </div>
-        <div className='section-prev-custom'>
-          <div className='title-customize'>
-            <img className='img-title-makeIt' src="../image/title-makeIt.png" alt="make it" />
-          </div>
-          <div className='contenedor-img-car'>
-            <img className='img-config' src={data.photo} alt="make it" />
-          </div>
+      <div className='div-color'>
+        <h2 className='title-color'>Select color</h2>
+        <div className='section-color'>
+          {colorsArray?.map((color) => (
+            <button key={color?._id} onClick={() => setSelectedColorId(color?._id)}>
+              <img className="color-1" srcSet={color?.color_code} alt={color?.color_name} />
+            </button>
+          ))}
         </div>
-        <div className='div-color'>
-          <h2 className='title-color'>Select color</h2>
-            <div className='section-color'>
-              <img className='color-1' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQcAAADACAMAAAA+71YtAAAAA1BMVEXjABuGu5rPAAAASElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+BsYAAAF7hZJ0AAAAAElFTkSuQmCC'></img>
-            </div>
+      </div>
+      <div className='div-color'>
+        <h2 className='title-color2'>Select Rims</h2>
+        <div className='section-color2'>
+          {rimsArray?.map((rim) => (
+            <button key={rim?._id} onClick={() => setSelectedRimId(rim?._id)}>
+              <img className="color-1" srcSet={rim?.photo_select} alt={rim?.name} />
+            </button>
+          ))}
         </div>
+      </div>
     </div>
-
   )
 }
+

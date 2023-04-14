@@ -15,6 +15,7 @@ import Details from './Details/Details';
 import Carrito from './Carrito/Carrito';
 import Custome from './Custome/Custome'
 
+import AIEngine from './AIEngine/AIEngine';
 
 import { createBrowserRouter } from "react-router-dom"
 
@@ -23,10 +24,15 @@ import { createBrowserRouter } from "react-router-dom"
 
 export const router = createBrowserRouter([
     {
+        path: '/',
+        children: [
+            { path: '', element: <Welcome /> },
+        ]
+    },
+    {
         path:'/',
         element: <MainLayout/>,
         children:[
-            {path:'', element: <Welcome />},
             {path:'home', element: <Home/>},
             {path:'register', element: <Register />},
             {path:'signin', element: <Login />},
@@ -40,6 +46,7 @@ export const router = createBrowserRouter([
             {path:'carrito', element: <Carrito />},
             {path:'select-model', element: <SelectModel/>},
             {path:'customize/:id', element: <Custome/>},
+            {path:'AIEngine', element: <AIEngine />},
         ]
     } 
     

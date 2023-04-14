@@ -1,9 +1,9 @@
 import { createReducer } from "@reduxjs/toolkit";
-import getAllColorsActions from './actions.js'
+import getAllRimssActions from './actions.js'
 
-const {getAllColors} = getAllColorsActions
+const {getAllRims} = getAllRimssActions
 const initialState = {
-    colors: [],
+    rim: [],
 };
 
 
@@ -11,13 +11,13 @@ const reducer = createReducer (
   initialState, 
   (builder) => builder
     .addCase(
-      getAllColors.fulfilled,
+      getAllRims.fulfilled,
       (state, action) => {
+        //console.log(action.payload)
         let newState = {
           ...state,
-          colors: action.payload.colors
+          rim: action.payload.rim
         }
-        //console.log(action.payload)
         return newState
       }
     )
