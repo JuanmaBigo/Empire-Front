@@ -14,17 +14,18 @@ export default function Customize() {
   const color = useSelector((store) => store.colors.colors);
   const data = useSelector((store) => store.model?.car)
   const rim = useSelector((store) => store.rim?.rim)
-  console.log(rim)
+  console.log(useSelector((store) => store))
   const colorsArray = color ? Object.values(color) : [];
   const rimsArray = rim ? Object.values(rim) : [];
   const [selectedColorId, setSelectedColorId] = useState(null);
   const [selectedRimId, setSelectedRimId] = useState(null);
   const params = useParams()
-/* 
-  const color_id = rim?.rim?.color_id
+ 
+ /*  const color_id = useSelector((store) => store.rim?.rim?.color_id)
+  console.log(color_id) */
 
-  const rimColor = color?.Find((evento) => rim?.color_id === evento?._id)
-  console.log(rimColor) */
+/*   const rimColor = color?.Find((evento) => rim?.color_id === evento?._id)
+  console.log(rimColor)  */
 
 
   useEffect(() => {
@@ -32,9 +33,9 @@ export default function Customize() {
     dispatch(getAllColors(params.id))
   }, [dispatch])
 
-/*   useEffect(() => {
-    dispatch(getAllRims(rim))
-  }, [dispatch]) */
+   useEffect(() => {
+    dispatch(getAllRims())
+  }, [dispatch]) 
 
   return (
     <div className='cont-customize'>
