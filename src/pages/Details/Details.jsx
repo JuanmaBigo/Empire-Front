@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "./details.css"
 import { Link as Anchor } from 'react-router-dom'
-import motor from "../../images/motor.png"
-import top from "../../images/topvelocidad.png"
-import aceleracion from "../../images/aceleracion.png"
-// import auto from "../../images/detailsImage.png"
+import motor from "../../assets/img/motor-icon.png"
+import velocimeter from "../../assets/img/velocimeter-icon.png"
+import aceleration from "../../assets/img/timer-icon.png"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router"
 import carActions from "../../store/model/actions.js"
@@ -46,13 +45,14 @@ const Details = () => {
                 <h3>POWER: {data.hp}CV</h3>
               </div>
               <div className='carDetails'>
-                <img src={top} alt="" />
+                <img src={velocimeter} alt="" />
                 <h3>MAX. SPEED: {data.top_speed}Km/h</h3>
               </div>
               <div className='carDetails'>
-                <img src={aceleracion} alt="" />
+                <img src={aceleration} alt="" />
                 <h3>0-100 km/h: {data.acceleration}s</h3>
               </div>
+              
             </div>
           </div>
           <div className='textDetails'>

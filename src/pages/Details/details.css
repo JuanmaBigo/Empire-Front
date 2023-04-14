@@ -26,6 +26,12 @@
   background: linear-gradient(351.12deg, #ABABAB -252.04%, #000000 185.17%);
 }
 
+.speedDetails img {
+  height: 2.5rem;
+  width: 2.5rem;
+  object-fit: contain;
+}
+
 .carDetails {
   display: flex;
   align-items: center;
@@ -40,11 +46,9 @@
 
 .Detailsbtn {
   display: flex;
-  position: absolute;
   color: rgb(196, 196, 196);
-  left: 70%;
-  top: 572px;
   padding: 0.5rem 1rem;
+  height: fit-content;
   background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
   box-shadow: #070707 0px 0px 2px;
   text-decoration: none;
@@ -52,6 +56,9 @@
   justify-content: center;
   font-size: 28px;
   transition: all 250ms linear;
+  position: absolute;
+  right: 10vw;
+  bottom: 40vh;
 }
 
 .Detailsbtn:hover {
@@ -84,6 +91,8 @@
   object-fit: cover;
   object-position: right;
   position: relative;
+  object-fit: cover;
+  right: 0;
 }
 
 .desciptiontext1 {
@@ -155,4 +164,76 @@
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+}
+
+@media screen and (max-aspect-ratio: 16/10) {
+  .desciption1 {
+    object-position: -500px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .descriptionDetails {
+    flex-direction: column-reverse;
+  }
+
+  .desciption1 {
+    clip-path: none !important;
+    width: 90vw;
+    height: 30vh;
+    object-position: 58% 50%;
+  }
+
+  .desciptiontext1,
+  .desciptiontext2 {
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80vw;
+  }
+
+  .description2 {
+    display: none;
+  }
+
+  .Detailsbtn {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .detailsTitle {
+    margin: 0;
+    right: 0;
+    margin-top: 6rem;
+  }
+
+  .speedDetails {
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .carDetails {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .carDetails h3 {
+    font-weight: 300;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .speedDetails {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .carDetails {
+    margin-left: 2rem;
+  }
 }
