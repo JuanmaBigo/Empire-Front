@@ -1,0 +1,258 @@
+.firstDetails {
+  height: 100vh;
+}
+
+.mainDetails {
+  height: 80%;
+}
+
+.detailsTitle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: 25vh;
+  margin-left: 5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.speedDetails {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20%;
+  background: linear-gradient(351.12deg, #ABABAB -252.04%, #000000 185.17%);
+}
+
+.speedDetails img {
+  height: 2.5rem;
+  width: 2.5rem;
+  object-fit: contain;
+}
+
+.carDetails {
+  display: flex;
+  align-items: center;
+  height: 20%;
+  color: white;
+  gap: 1rem;
+}
+
+.carDetails h3 {
+  font-weight: 400;
+}
+
+.carDetails p{
+  font-weight: 200;
+  font-size: 1.1rem;
+}
+
+.Detailsbtn {
+  display: flex;
+  color: rgb(196, 196, 196);
+  padding: 0.5rem 1rem;
+  height: fit-content;
+  background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
+  box-shadow: #070707 0px 0px 2px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: all 250ms linear;
+  position: absolute;
+  right: 10vw;
+  bottom: 40vh;
+}
+
+.Detailsbtn:hover {
+  cursor: pointer;
+  background-color: rgb(44, 44, 44);
+  color: rgb(255, 255, 255);
+}
+
+.Detailsbtn p {
+  text-transform: uppercase;
+}
+
+.photoDetails {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: black;
+}
+
+.descriptionDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.desciption1 {
+  width: 50vw;
+  height: 50vh;
+  clip-path: polygon(0 100%, 0 0, 100% 0, 60% 100%);
+  object-fit: cover;
+  object-position: right;
+  position: relative;
+  object-fit: cover;
+  right: 0;
+}
+
+.desciptiontext1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30vw;
+  margin-right: 10rem;
+}
+
+.desciptiontext1 p,
+.desciptiontext2 p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.desciptiontext1 h3,
+.desciptiontext2 h3 {
+  color: black;
+  text-transform: uppercase;
+}
+
+.desciptiontext2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 10rem;
+  width: 40vw;
+}
+
+.description2 {
+  width: 50vw;
+  height: 40vh;
+  clip-path: polygon(15% 100%, 0 0, 76% 0, 76% 100%);
+  position: relative;
+  object-fit: cover;
+  left: 21vw;
+}
+
+.Btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lastBtn {
+  margin-top: 40px;
+  display: flex;
+  color: white;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
+  box-shadow: #070707 0px 0px 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 3rem;
+  transition: all 250ms linear;
+}
+
+.lastBtn:hover {
+  cursor: pointer;
+  background-color: rgb(44, 44, 44);
+  color: rgb(255, 255, 255);
+}
+
+.textDetails {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+@media screen and (max-aspect-ratio: 16/10) {
+  .desciption1 {
+    object-position: -500px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .descriptionDetails {
+    flex-direction: column-reverse;
+  }
+
+  .desciption1 {
+    clip-path: none !important;
+    width: 90vw;
+    height: 30vh;
+    object-position: 58% 50%;
+  }
+
+  .desciptiontext1,
+  .desciptiontext2 {
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80vw;
+  }
+
+  .description2 {
+    display: none;
+  }
+
+  .Detailsbtn {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .detailsTitle {
+    margin: 0;
+    right: 0;
+    margin-top: 6rem;
+  }
+
+  .speedDetails {
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .carDetails {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .carDetails h3 {
+    font-weight: 300;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .speedDetails {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .carDetails {
+    padding-left: 2rem;
+  }
+  .text-details-cars{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 300px;
+  }
+  .text-details-cars p{
+    font-size: 1rem;
+  }
+  .text-details-cars h3{
+    font-size: 1rem;
+  }
+}

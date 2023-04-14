@@ -32,11 +32,17 @@
     padding: 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    font-weight: normal;
-    color: #fff;
-    background-color: #000;
+    font-weight: 600;
+    color: #000000;
+    background-color: #ffffff;
     border: none;
     margin-top: 30vh;
+    box-shadow: #000 0px 0px 3px;
+  }
+  .btn-vehiclespage:hover {
+    cursor: pointer;
+    color: #272727;
+    background-color: #d4d4d4;
   }
   
   .section-btn-vehicles {

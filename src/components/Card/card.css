@@ -8,11 +8,11 @@
     width: 15rem;
     margin-left: 1.5rem;
 }
-h2 {
+.container-card h2 {
     color: white;
     margin-left: 4rem;
 }
-h3 {
+.container-card h3 {
     color: white;
     margin-top: 1.5rem;
 }
