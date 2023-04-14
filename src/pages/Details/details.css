@@ -1,110 +1,157 @@
-
-.firstDetails{
+.firstDetails {
   height: 100vh;
 }
-.mainDetails{
+
+.mainDetails {
   height: 80%;
 }
-.detailsTitle{
+
+.detailsTitle {
   position: absolute;
-  width: 36.188rem;
-  height: 4.688rem;
-  left: 34%;
-  top: 5.625rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: 25vh;
+  margin-left: 5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.5rem;
 }
-.speedDetails{
+
+.speedDetails {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 20%;
-  background-color: black;
+  background: linear-gradient(351.12deg, #ABABAB -252.04%, #000000 185.17%);
 }
-.carDetails{
+
+.carDetails {
   display: flex;
   align-items: center;
   height: 20%;
   color: white;
+  gap: 0.5rem;
 }
-.Detailsbtn{
+
+.carDetails h3 {
+  font-weight: 300;
+}
+
+.Detailsbtn {
   display: flex;
   position: absolute;
-  color: black;
-  width: 369px;
-  height: 61px;
+  color: rgb(196, 196, 196);
   left: 70%;
   top: 572px;
-  background-color: white;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
+  box-shadow: #070707 0px 0px 2px;
   text-decoration: none;
   align-items: center;
   justify-content: center;
   font-size: 28px;
-  
+  transition: all 250ms linear;
 }
-.photoDetails{
+
+.Detailsbtn:hover {
+  cursor: pointer;
+  background-color: rgb(44, 44, 44);
+  color: rgb(255, 255, 255);
+}
+
+.Detailsbtn p {
+  text-transform: uppercase;
+}
+
+.photoDetails {
   width: 100%;
   height: 100%;
   object-fit: cover;
- 
+  background-color: black;
 }
 
-.descriptionDetails{
+.descriptionDetails {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.desciption1{
-  width: 60%;
-  height: 400px;
+.desciption1 {
+  width: 50vw;
+  height: 50vh;
   clip-path: polygon(0 100%, 0 0, 100% 0, 60% 100%);
   object-fit: cover;
-  object-position: left;
+  object-position: right;
+  position: relative;
 }
-.desciptiontext1{
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 65px;
-}
-.desciptiontext1 h3{
- color: black;
-}
-.desciptiontext2{
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 65px;
-  margin-left: 30px;
-}
-.desciptiontext2 h3{
-  color: black;
- }
 
-.description2{
-  width: 60%;
-  height: 400px;
+.desciptiontext1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30vw;
+  margin-right: 10rem;
+}
+
+.desciptiontext1 p,
+.desciptiontext2 p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.desciptiontext1 h3,
+.desciptiontext2 h3 {
+  color: black;
+  text-transform: uppercase;
+}
+
+.desciptiontext2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 10rem;
+  width: 40vw;
+}
+
+.description2 {
+  width: 50vw;
+  height: 40vh;
   clip-path: polygon(15% 100%, 0 0, 76% 0, 76% 100%);
   position: relative;
-  left: 290px;
+  object-fit: cover;
+  left: 21vw;
 }
-.Btn{
+
+.Btn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.lastBtn{
+.lastBtn {
   margin-top: 40px;
   display: flex;
   color: white;
-  width: 550px;
-  height: 61px;
-  background-color: black;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
+  box-shadow: #070707 0px 0px 2px;
   text-decoration: none;
+  text-transform: uppercase;
   align-items: center;
   justify-content: center;
   font-size: 28px;
+  margin-bottom: 3rem;
+  transition: all 250ms linear;
 }
 
-.textDetails{
+.lastBtn:hover {
+  cursor: pointer;
+  background-color: rgb(44, 44, 44);
+  color: rgb(255, 255, 255);
+}
+
+.textDetails {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;

@@ -44,9 +44,6 @@ export default function Model() {
 const filteredCars = cars?.filter(car => {
     const categoryIdMatch = searchFilters.selectedCategory === '' || car?.category_id._id.toString() === searchFilters.selectedCategory.toString();
     const nameMatch = car.name.toLowerCase().includes(searchFilters.searchTerm.toLowerCase());
-
-    console.log('car:', car, 'categoryIdMatch:', categoryIdMatch, 'nameMatch:', nameMatch);
-
     return categoryIdMatch && nameMatch;
 });
 
