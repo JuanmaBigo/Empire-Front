@@ -80,7 +80,7 @@ const Details = () => {
 
 
           <div className='Btn'>
-            <Anchor to="/customize" className="lastBtn"> Build your {data.name} </Anchor>
+            <Anchor to="customize/:id" className="lastBtn"> Build your {data.name} </Anchor>
           </div>
 
 
