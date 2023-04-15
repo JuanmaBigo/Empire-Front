@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import actions from '../../store/model/actions';
 import actionCat from '../../store/categories/actions';
-
 import './model.css';
 import { Link as Anchor } from 'react-router-dom';
 
@@ -43,7 +42,7 @@ export default function Model() {
 
 const filteredCars = cars?.filter(car => {
     const categoryIdMatch = searchFilters.selectedCategory === '' || car?.category_id._id.toString() === searchFilters.selectedCategory.toString();
-    const nameMatch = car.name.toLowerCase().includes(searchFilters.searchTerm.toLowerCase());
+    const nameMatch = car.name.toLowerCase().trim(" ").includes(searchFilters.searchTerm.toLowerCase());
     return categoryIdMatch && nameMatch;
 });
 

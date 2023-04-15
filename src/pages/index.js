@@ -13,6 +13,8 @@ import SelectModel from './SelectModel/SelectModel';
 import ContactUs from './ContactUs/ContactUs';
 import Details from './Details/Details';
 import Carrito from './Carrito/Carrito';
+import Custome from './Custome/Custome'
+
 import AIEngine from './AIEngine/AIEngine';
 
 import { createBrowserRouter } from "react-router-dom"
@@ -43,6 +45,7 @@ export const router = createBrowserRouter([
             {path:'details/:id',element:<Details/>},
             {path:'carrito', element: <Carrito />},
             {path:'select-model', element: <SelectModel/>},
+            {path:'customize/:id', element: <Custome/>},
             {path:'AIEngine', element: <AIEngine />},
         ]
     } 

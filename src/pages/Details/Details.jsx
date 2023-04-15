@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router"
 import carActions from "../../store/model/actions.js"
 
-
 const { getOne } = carActions
 
 
@@ -81,7 +80,7 @@ const Details = () => {
 
 
           <div className='Btn'>
-            <Anchor to="#" className="lastBtn"> Build your {data.name} </Anchor>
+            <Anchor to="/customize" className="lastBtn"> Build your {data.name} </Anchor>
           </div>
 
 
