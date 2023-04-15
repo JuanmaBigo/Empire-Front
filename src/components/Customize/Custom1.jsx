@@ -3,6 +3,8 @@ import './customize.css'
 import { useDispatch, useSelector } from 'react-redux'
 import colorActions from '../../store/color/actions'
 import rimActions from '../../store/rims/actions'
+import apiUrl from '../../configHost.js'
+import axios from 'axios'
 import { Link as Anchor } from 'react-router-dom'
 import { useParams } from "react-router"
 
@@ -12,7 +14,6 @@ const { getAllRims } = rimActions
 
 export default function Custom() {
     let car_id = '64377af5968955ae96af9018'
-
     const [selectedRim, setSelectedRim] = useState();
     const [selectedColor, setSelectedColor] = useState();
     const [reload, setReload] = useState(false)
@@ -39,6 +40,7 @@ export default function Custom() {
         console.log(rims)
         setPhotoVehicle(rims[1]?.photo)
     }
+
 
     setTimeout(() => {
         setLoaded(true) //dice que ya cargo la pagina
@@ -72,10 +74,29 @@ export default function Custom() {
         setPhotoVehicle(rims[number - 1].photo)
     };
 
-    console.log('color = ', selectedColor)
-    console.log('rim= ', selectedRim)
+    let token = localStorage.getItem('token')
+    let headers = { headers: { 'Authorization': `Bearer ${token}` } }
 
-    //boton add to resume 
+    let url = `${apiUrl}items`
+
+    async function handleItem() {
+        let data = {
+            car_id: car_id,
+            color_id: selectedColor,
+            rim_id: selectedRim
+        }
+       
+        try {
+            await axios.post(url, data, headers)
+        } catch (error) {
+            console.log(error)
+        }
+        console.log(data)
+
+    }
+    
+        console.log('color = ', selectedColor)
+    console.log('rim= ', selectedRim)
 
     const [showResume, setShowResume] = useState(false);
 
@@ -224,7 +245,7 @@ export default function Custom() {
                             <h2>$numero</h2>
                             </div>
                             <div className='section-addcart'>
-                            <button>add to cart</button>
+                            <button onClick={handleItem}>add to cart</button>
                             </div>
                             
                         </div>
