@@ -168,11 +168,6 @@ export default function Custom() {
                 </div>
             </div>
             </div>
-          
-
-      
-          
-
         
     )
 }
