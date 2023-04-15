@@ -36,7 +36,7 @@ const Details = () => {
                 <source src={data.video} type="video/mp4" />
               </video>
               <h1 className='detailsTitle'>{data.name}</h1>
-              <Anchor to="customize" className="lastBtn"> Build your {data.name} </Anchor>
+              <Anchor to="customize" className="Detailsbtn"><p> Build your {data.name} </p></Anchor>
             </div>
             <div className='speedDetails'>
               <div className='carDetails'>
@@ -80,7 +80,7 @@ const Details = () => {
 
 
           <div className='Btn'>
-            <Anchor to="customize" className="lastBtn"> Build your {data.name} </Anchor>
+          <Anchor to="customize" className="lastBtn"> Build your {data.name} </Anchor>
           </div>
         </div>
         : null}
