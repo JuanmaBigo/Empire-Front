@@ -1,5 +1,5 @@
 .cont-customize {
-    width: 100vw;
+    width:100%;
     height: auto;
     background: rgb(237, 237, 237);
     display: flex;
@@ -23,6 +23,16 @@
     position: relative;
     z-index: 1;
 
+  }
+
+  
+  .resume {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* anima la propiedad 'opacity' durante 0.5 segundos con un efecto suave 'ease-in-out' */
+  }
+  
+  .resume.hidden {
+    opacity: 0;
   }
   
  .contenedor-img-car {
@@ -55,8 +65,35 @@
     }
   
 }
-
-
+.section-btn-resume{
+    background: black;
+    height: 10vh;
+}
+.btn-123 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.Btn-custome {
+    margin-top: 1rem;
+  display: flex;
+  color: white;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
+  box-shadow: #070707 0px 0px 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: all 250ms linear;
+  }
+.resume{
+    width: 100%;
+    height: 100%;
+   
+    
+}
 .div-color {
     width: 40vw;
     height:100vh;
@@ -179,6 +216,44 @@ button{
     
 }
 
+.resume {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+  }
+  
+  .resume.visible {
+    opacity: 1;
+    height: auto;
+  }
+
+.contenedor-resume-custom{
+    display: flex;
+    flex-direction: row;
+}
+.img-resume{
+    background: rgba(255, 192, 203, 0.368);
+    width: 50%;
+}
+.resume-info{
+    background: rgba(193, 103, 12, 0.368);
+    width: 50%;
+}
+.info-item-resume{
+    display: flex;
+    flex-direction: row;
+    background: rgba(0, 0, 255, 0.464);
+    margin: 1rem;
+    justify-content: space-between;
+}
+.section-addcart{
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 0, 0, 0.533);
+}
 @media (min-width:320px) and (max-width: 767px){
     .cont-customize {
         width: 100vw;
