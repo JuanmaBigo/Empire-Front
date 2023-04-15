@@ -45,7 +45,7 @@ export const router = createBrowserRouter([
             {path:'details/:id',element:<Details/>},
             {path:'carrito', element: <Carrito />},
             {path:'select-model', element: <SelectModel/>},
-            {path:'customize/:id', element: <Custome/>},
+            {path:'details/:id/customize', element: <Custome/>},
             {path:'AIEngine', element: <AIEngine />},
         ]
     } 
