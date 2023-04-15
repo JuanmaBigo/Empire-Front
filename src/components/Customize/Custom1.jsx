@@ -7,19 +7,21 @@ import apiUrl from '../../configHost.js'
 import axios from 'axios'
 import { Link as Anchor } from 'react-router-dom'
 import { useParams } from "react-router"
-
+import modelActions from "../../store/model/actions.js"
+import img from '../../assets/img/title-makeIt.png'
 const { getAllColors } = colorActions
 const { getAllRims } = rimActions
+const {getOne}=modelActions
 
 
 export default function Custom() {
-    let car_id = '64377af5968955ae96af9018'
+    let params = useParams()
+    let car_id = params.id
     const [selectedRim, setSelectedRim] = useState();
     const [selectedColor, setSelectedColor] = useState();
     const [reload, setReload] = useState(false)
     const [loaded, setLoaded] = useState(false)
     const [loaded2, setLoaded2] = useState(false)
-
     const [selectedOption, setSelectedOption] = useState('option 1');
     const [selectedOptionRim, setSelectedOptionRim] = useState('option rim 1');
     const [photoVehicle, setPhotoVehicle] = useState('')
@@ -28,6 +30,7 @@ export default function Custom() {
     const dispatch = useDispatch()
 
     useEffect(() => {
+        dispatch(getOne({_id:car_id}))
         dispatch(getAllColors(car_id))
         setReload(!reload)
     }, []);
@@ -40,7 +43,6 @@ export default function Custom() {
         console.log(rims)
         setPhotoVehicle(rims[1]?.photo)
     }
-
 
     setTimeout(() => {
         setLoaded(true) //dice que ya cargo la pagina
@@ -59,12 +61,12 @@ export default function Custom() {
 
     let colors = useSelector(store => store.colors.colors)
     let rims = useSelector(store => store.rim.rim)
+    let car = useSelector(store => store.model.car)
 
     const handleOptionChange = (event) => {
         setSelectedOption(event.target.value);
         setSelectedColor(event.target.id)
     }
-
 
     const handleOptionChangeRims = (event) => {
         setSelectedOptionRim(event.target.value);
@@ -85,7 +87,7 @@ export default function Custom() {
             color_id: selectedColor,
             rim_id: selectedRim
         }
-       
+
         try {
             await axios.post(url, data, headers)
         } catch (error) {
@@ -94,36 +96,28 @@ export default function Custom() {
         console.log(data)
 
     }
-    
-        console.log('color = ', selectedColor)
-    console.log('rim= ', selectedRim)
 
+    //boton add to cart q se desplega
     const [showResume, setShowResume] = useState(false);
 
     const handleResumeButtonClick = () => {
         setShowResume(!showResume);
     };
 
+   // console.log('color = ', selectedColor)
+    //console.log('rim= ', selectedRim)
     // generar un actions par traer exclusivamente una foto con esto
     //se le pasa el id de la llanta y trae la foto
     // http://localhost:8080/api/rims/64377af4968955ae96af8fb0
     // http://localhost:8080/api/rims/64377af4968955ae96af8fb0
 
 
-
-
-
-
-
-
-
     return (
         <div>
             <div className='cont-customize'>
-
                 <div className='section-prev-custom'>
                     <div className='title-customize'>
-                        <img className='img-title-makeIt' src="../image/title-makeIt.png" alt="make it" />
+                        <img className='img-title-makeIt' src={img} alt="make it" />
                     </div>
                     <div className='contenedor-img-car'>
                         <img className="img-config" src={photoVehicle} alt="make it" />
@@ -216,43 +210,39 @@ export default function Custom() {
                 </div>
                 <div className={`resume ${showResume ? 'visible' : ''}`}>
                     <div>
-                    <div className='contenedor-resume-custom'>
-                        <div className='img-resume'>
-                            <img
-                                src="https://via.placeholder.com/500x200.png"
-                                alt="Imagen de ejemplo"
-                                className='image'
-                            />
-                        </div>
-                        <div className='resume-info'>
-                            <h2>titulo resume</h2>
-                            <div className='info-item-resume'>
-                                <div><h1>auto</h1></div>
-                                <div><h1>precio</h1></div>
+                        <div className='contenedor-resume-custom'>
+                            <div className='img-resume'>
+                                <img
+                                    src={photoVehicle}
+                                    alt="Imagen de ejemplo"
+                                    className='image-resume'
+                                />
                             </div>
-                            <div className='info-item-resume'>
-                                <div><h1>color</h1></div>
-                                <div><h1>precio</h1></div>
+                            <div className='resume-info'>
+                                <div className='info-item-resume'>
+                                    <div><h1>{car?.name}</h1></div>
+                                    <div><h1>${car?.price}</h1></div>
+                                </div>
+                                <div className='info-item-resume'>
+                                    <div><h1>{colors[parseInt(selectedOption.charAt(selectedOption.length - 1))]?.name}</h1></div>
+                                    <div><h1>${colors[parseInt(selectedOption.charAt(selectedOption.length - 1))]?.price_color}</h1></div>
+                                </div>
+                                <div className='info-item-resume'>
+                                    <div><h1>{rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1))]?.name}</h1></div>
+                                    <div><h1>${rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1))]?.price_rim}</h1></div>
+                                </div>
+                                <div className='section-addcart'>
+                                    <h2>TOTAL</h2>
+                                </div>
+                                <div className='section-addcart'>
+                                    <h2>${(car?.price + colors[parseInt(selectedOption.charAt(selectedOption.length - 1))]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1))]?.price_rim).toLocaleString("es-VE")}</h2>
+                                </div>
+                                <div className='section-addcart'>
+                                    <button className='Btn-custome' onClick={handleItem}>ADD TO CART</button>
+                                </div>
                             </div>
-                            <div className='info-item-resume'>
-                                <div><h1>llanta</h1></div>
-                                <div><h1>precio</h1></div>
-                            </div>
-                            <div className='section-addcart'>
-                            <h2>total</h2>
-                            </div>
-                            <div className='section-addcart'>
-                            <h2>$numero</h2>
-                            </div>
-                            <div className='section-addcart'>
-                            <button onClick={handleItem}>add to cart</button>
-                            </div>
-                            
                         </div>
                     </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>

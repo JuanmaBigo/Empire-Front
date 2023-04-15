@@ -215,35 +215,40 @@ button{
     margin-left: 0;
     
 }
-
+/*SECCION RESUME*/
 .resume {
     opacity: 0;
     height: 0;
     overflow: hidden;
     transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   }
-  
   .resume.visible {
     opacity: 1;
     height: auto;
   }
-
 .contenedor-resume-custom{
     display: flex;
     flex-direction: row;
 }
 .img-resume{
-    background: rgba(255, 192, 203, 0.368);
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.image-resume{
+    width: 90%;
+    height: auto;
 }
 .resume-info{
-    background: rgba(193, 103, 12, 0.368);
+    background: rgba(10, 10, 10, 0.368);
     width: 50%;
 }
 .info-item-resume{
     display: flex;
     flex-direction: row;
-    background: rgba(0, 0, 255, 0.464);
+    background: rgba(255, 255, 255, 0.464);
     margin: 1rem;
     justify-content: space-between;
 }
@@ -252,201 +257,6 @@ button{
     padding: 1rem;
     display: flex;
     justify-content: center;
-    background: rgba(255, 0, 0, 0.533);
-}
-@media (min-width:320px) and (max-width: 767px){
-    .cont-customize {
-        width: 100vw;
-        height: 100vh;
-        background: rgb(237, 237, 237);
-        display: flex;
-        flex-direction: row;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-    
-    .title-customize {
-        width: 100vw;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-    }
-    
-    .img-title-makeIt {
-        width: 50vw;
-        height: 20vh;
-        margin-top: 10vh;
-        position: relative;
-        z-index: 1;
-    }
-    .contenedor-img-car {
-        width: 100vw;
-        height: 70vh;
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-    }
-    .img-config {
-        width: 100vw;
-        height: 50vh;
-        position: relative;
-        z-index: 0;
-        margin-top: -10vh;
-    }
-
-    /*color*/
-    .section-color {
-        width: 40vw;
-        height: 10vh;
-        margin-left: 4vw;
-        display: flex;
-        justify-content: flex-start;
-    }
-    .title-color {
-        margin-top: 60vh;
-        margin-left: 0;
-        width: 40vw;
-        height: 9vh;
-        background: rgba(6, 6, 6, 0.588);
-        padding: 1rem;
-        color: rgb(3, 3, 3);
-        font-size: 0.8rem;
-        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    }
-    .color-1 {
-        width: 4vw;
-        height:4vh;
-        margin: 1rem;
-        margin-left: 0;
-       
-    }
-    button{
-        border:none
-    }
-    /*rim*/
-    .section-color2 {
-        width: 18vw;
-        height: 10vh;
-        margin-left: 4vw;
-        display: flex;
-        justify-content: flex-start;
-    }
-    .title-color2 {
-        margin-top:80vh;
-        margin-left: 20;
-        width: 80vw;
-        height: 9vh;
-        background: rgba(6, 6, 6, 0.588);
-        padding: 1rem;
-        color: rgb(3, 3, 3);
-        font-size:0.8rem;
-        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    }
-    .color-2 {
-        width: 5vw;
-        height:11vh;
-        margin: 1rem;
-        margin-left: 0;
-        
-    }
-    
-}
-@media (min-width:768px) and (max-width: 1023px){
-    .cont-customize {
-        width: 100vw;
-        height: 100vh;
-        background: rgb(237, 237, 237);
-        display: flex;
-        flex-direction: row;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-    
-    .title-customize {
-        width: 100vw;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-    }
-    
-    .img-title-makeIt {
-        width: 60vw;
-        height: 20vh;
-        margin-top: 10vh;
-        position: relative;
-        z-index: 1;
-    }
-    .contenedor-img-car {
-        width: 100vw;
-        height: 70vh;
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-    }
-    .img-config {
-        width: 100vw;
-        height: 60vh;
-        position: relative;
-        z-index: 0;
-        margin-top: -20vh;
-    }
-
-    /*color*/
-    .section-color {
-        width: 40vw;
-        height: 10vh;
-        margin-left: 4vw;
-        display: flex;
-        justify-content: flex-start;
-    }
-    .title-color {
-        margin-top: 60vh;
-        margin-left: 0;
-        width: 40vw;
-        height: 9vh;
-        background: rgba(6, 6, 6, 0.588);
-        padding: 1rem;
-        color: rgb(3, 3, 3);
-        font-size: 2rem;
-        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    }
-    .color-1 {
-        width: 9vw;
-        height:8vh;
-        margin: 1rem;
-        margin-left: 0;
-       
-    }
-    button{
-        border:none
-    }
-    /*rim*/
-    .section-color2 {
-        width: 18vw;
-        height: 10vh;
-        margin-left: 4vw;
-        display: flex;
-        justify-content: flex-start;
-    }
-    .title-color2 {
-        margin-top:80vh;
-        margin-left: 20;
-        width: 80vw;
-        height: 9vh;
-        background: rgba(6, 6, 6, 0.588);
-        padding: 1rem;
-        color: rgb(3, 3, 3);
-        font-size:2rem;
-        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    }
-    .color-2 {
-        width: 5vw;
-        height:11vh;
-        margin: 1rem;
-        margin-left: 0;
-        
-    }
-    
+    background: rgba(4, 4, 4, 0.728);
+    color: white;
 }
