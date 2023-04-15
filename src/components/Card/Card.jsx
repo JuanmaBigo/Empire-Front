@@ -4,6 +4,12 @@ import Image from '../Image/Image'
 import imgclose from '../../images/close2.png'
 
 export default function Card() {
+
+
+
+
+
+  
   return (
     < >
     <div >

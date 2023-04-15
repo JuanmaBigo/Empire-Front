@@ -3,6 +3,8 @@ import './customize.css'
 import { useDispatch, useSelector } from 'react-redux'
 import colorActions from '../../store/color/actions'
 import rimActions from '../../store/rims/actions'
+import apiUrl from '../../configHost.js'
+
 
 const { getAllColors } = colorActions
 const { getAllRims } = rimActions
@@ -10,6 +12,7 @@ const { getAllRims } = rimActions
 
 export default function Custom() {
     let car_id = '64377af5968955ae96af9018'
+
 
     const [selectedRim, setSelectedRim] = useState();
     const [selectedColor, setSelectedColor] = useState();
