@@ -21,6 +21,7 @@ export default function Custom() {
     const [selectedColor, setSelectedColor] = useState();
     const [loaded, setLoaded] = useState(false)
     const [loaded2, setLoaded2] = useState(false)
+    const [loaded3, setLoaded3] = useState(false)
     const [selectedOption, setSelectedOption] = useState('option 1');
     const [selectedOptionRim, setSelectedOptionRim] = useState('option rim 1');
     const [photoVehicle, setPhotoVehicle] = useState('')
@@ -33,7 +34,7 @@ export default function Custom() {
     }, []);
 
     useEffect(() => {
-        if (loaded2 === true){
+        if (loaded2 === true) {
             dispatch(getAllRims(selectedColor))
         }
     }, [selectedColor, selectedRim, loaded2]);
@@ -47,14 +48,17 @@ export default function Custom() {
     }, 600);
 
     useEffect(() => {  //solo al pricipio
-        if(colors.length > 0){
+        console.log('colores', colors)
+        if (colors.length > 0) {
             console.log('colores', colors)
-        dispatch(getAllRims(colors[0]?._id))
-        setSelectedColor(colors[0]?._id)
-        setSelectedRim(rims[0]?._id)
-        setPhotoVehicle(rims[0]?.photo)
+            dispatch(getAllRims(colors[0]?._id))
+            setSelectedColor(colors[0]?._id)
+            setSelectedRim(rims[0]?._id)
+            setPhotoVehicle(rims[0]?.photo)
+        } else {
+            setLoaded3(!loaded3)
         }
-    }, [loaded, loaded2]);
+    }, [loaded, loaded2, loaded3]);
 
     let colors = useSelector(store => store.colors.colors)
     let rims = useSelector(store => store.rim.rim)
