@@ -44,7 +44,7 @@ export default function Custom() {
 
     setTimeout(() => {
         setLoaded2(true)  //dice que ya cargo la pagina para traer las llantas
-    }, 500);
+    }, 600);
 
     useEffect(() => {  //solo al pricipio
         if(colors.length > 0){
