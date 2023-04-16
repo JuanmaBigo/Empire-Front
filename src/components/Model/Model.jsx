@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import actions from '../../store/model/actions';
@@ -46,8 +45,8 @@ const filteredCars = cars?.filter(car => {
     return categoryIdMatch && nameMatch;
 });
 
-      const photo = filteredCars?.length ? filteredCars[currentIndex].photo : null;
-      const name = filteredCars?.length ? filteredCars[currentIndex].name : null;
+      const photo = filteredCars?.length ? filteredCars[currentIndex]?.photo : null;
+      const name = filteredCars?.length ? filteredCars[currentIndex]?.name : null;
       
 
       return (
