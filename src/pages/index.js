@@ -13,7 +13,8 @@ import SelectModel from './SelectModel/SelectModel';
 import ContactUs from './ContactUs/ContactUs';
 import Details from './Details/Details';
 import Carrito from './Carrito/Carrito';
-import Custome from './Custome/Custome'
+import Custome from './Custome/Custome';
+import CompletedPurchase from './CompletedPurchase'
 
 import AIEngine from './AIEngine/AIEngine';
 
@@ -48,6 +49,8 @@ export const router = createBrowserRouter([
             {path:'select-model', element: <SelectModel/>},
             {path:'details/:id/customize', element: <Custome/>},
             {path:'AIEngine', element: <AIEngine />},
+            {path:'', element: <CompletedPurchase />},
+
         ]
     } 
     
