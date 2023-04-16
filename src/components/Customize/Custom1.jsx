@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './customize.css'
 import { useDispatch, useSelector } from 'react-redux'
 import colorActions from '../../store/color/actions'
@@ -11,7 +11,7 @@ import modelActions from "../../store/model/actions.js"
 import img from '../../assets/img/title-makeIt.png'
 const { getAllColors } = colorActions
 const { getAllRims } = rimActions
-const {getOne}=modelActions
+const { getOne } = modelActions
 
 
 export default function Custom() {
@@ -19,38 +19,32 @@ export default function Custom() {
     let car_id = params.id
     const [selectedRim, setSelectedRim] = useState();
     const [selectedColor, setSelectedColor] = useState();
-    const [reload, setReload] = useState(false)
     const [loaded, setLoaded] = useState(false)
     const [loaded2, setLoaded2] = useState(false)
     const [selectedOption, setSelectedOption] = useState('option 1');
     const [selectedOptionRim, setSelectedOptionRim] = useState('option rim 1');
     const [photoVehicle, setPhotoVehicle] = useState('')
-    const inputGroup = useRef()
 
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(getOne({_id:car_id}))
+        dispatch(getOne({ _id: car_id }))
         dispatch(getAllColors(car_id))
-        setReload(!reload)
     }, []);
 
     useEffect(() => {
-        dispatch(getAllRims(selectedColor))
-    }, [selectedColor]);
-
-    function changePhotoVehicle() {
-        console.log(rims)
-        setPhotoVehicle(rims[1]?.photo)
-    }
+        if (loaded2 === true) {
+            dispatch(getAllRims(selectedColor))
+        }
+    }, [selectedColor, selectedRim]);
 
     setTimeout(() => {
-        setLoaded(true) //dice que ya cargo la pagina
+        setLoaded(true) //dice que ya cargo la pagina para traer los colores
     }, 100);
 
     setTimeout(() => {
-        setLoaded2(true)  //dice que ya cargo la pagina
-    }, 500);
+        setLoaded2(true)  //dice que ya cargo la pagina para traer las llantas
+    }, 400);
 
     useEffect(() => {  //solo al pricipio
         dispatch(getAllRims(colors[0]?._id))
@@ -62,18 +56,22 @@ export default function Custom() {
     let colors = useSelector(store => store.colors.colors)
     let rims = useSelector(store => store.rim.rim)
     let car = useSelector(store => store.model.car)
+    console.log(car)
 
     const handleOptionChange = (event) => {
         setSelectedOption(event.target.value);
         setSelectedColor(event.target.id)
     }
 
+    if (loaded2 === true) {
+        setTimeout(() => {
+            setPhotoVehicle(rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1].photo)
+        }, 300);
+    }
+
     const handleOptionChangeRims = (event) => {
         setSelectedOptionRim(event.target.value);
         setSelectedRim(event.target.id)
-
-        let number = parseInt((event.target.value).charAt((event.target.value).length - 1))
-        setPhotoVehicle(rims[number - 1].photo)
     };
 
     let token = localStorage.getItem('token')
@@ -104,13 +102,6 @@ export default function Custom() {
         setShowResume(!showResume);
     };
 
-   // console.log('color = ', selectedColor)
-    //console.log('rim= ', selectedRim)
-    // generar un actions par traer exclusivamente una foto con esto
-    //se le pasa el id de la llanta y trae la foto
-    // http://localhost:8080/api/rims/64377af4968955ae96af8fb0
-    // http://localhost:8080/api/rims/64377af4968955ae96af8fb0
-
 
     return (
         <div>
@@ -124,7 +115,7 @@ export default function Custom() {
                     </div>
                 </div>
                 <div className='div-color'>
-                    <h2 className='title-color'>Select color</h2>
+                    <h2 className='title-color'>COLOR SELECTION</h2>
                     <div className='section-color'>
                         <label htmlFor={colors[0]?._id}>
                             <img className="color-1" srcSet={colors[0]?.color_code} alt={colors[0]?.name} />
@@ -162,7 +153,7 @@ export default function Custom() {
                     </div>
                 </div>
                 <div className='div-color2'>
-                    <h2 className='title-color2'>Select Rims</h2>
+                    <h2 className='title-color2'>RIMS SELECTION</h2>
                     <div className='section-color2'>
                         <label htmlFor={rims[0]?._id}>
                             <img className="rim-1" srcSet={rims[0]?.photo_select} alt={rims[0]?.name} />
@@ -221,21 +212,21 @@ export default function Custom() {
                             <div className='resume-info'>
                                 <div className='info-item-resume'>
                                     <div><h1>{car?.name}</h1></div>
-                                    <div><h1>${car?.price}</h1></div>
+                                    <div><h1>${(car?.price)?.toLocaleString("es-VE")}</h1></div>
                                 </div>
                                 <div className='info-item-resume'>
-                                    <div><h1>{colors[parseInt(selectedOption.charAt(selectedOption.length - 1))]?.name}</h1></div>
-                                    <div><h1>${colors[parseInt(selectedOption.charAt(selectedOption.length - 1))]?.price_color}</h1></div>
+                                    <div><h1>{colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.name}</h1></div>
+                                    <div><h1>${(colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color)?.toLocaleString("es-VE")}</h1></div>
                                 </div>
                                 <div className='info-item-resume'>
-                                    <div><h1>{rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1))]?.name}</h1></div>
-                                    <div><h1>${rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1))]?.price_rim}</h1></div>
+                                    <div><h1>{rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.name}</h1></div>
+                                    <div><h1>${(rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h1></div>
                                 </div>
                                 <div className='section-addcart'>
                                     <h2>TOTAL</h2>
                                 </div>
                                 <div className='section-addcart'>
-                                    <h2>${(car?.price + colors[parseInt(selectedOption.charAt(selectedOption.length - 1))]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1))]?.price_rim).toLocaleString("es-VE")}</h2>
+                                    <h2>${(car?.price + colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h2>
                                 </div>
                                 <div className='section-addcart'>
                                     <button className='Btn-custome' onClick={handleItem}>ADD TO CART</button>

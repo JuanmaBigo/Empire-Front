@@ -1,5 +1,5 @@
 .cont-customize {
-    width:100%;
+    width: 100%;
     height: auto;
     background: rgb(237, 237, 237);
     display: flex;
@@ -22,20 +22,21 @@
     margin-top: 10vh;
     position: relative;
     z-index: 1;
+    object-fit: contain;
+}
 
-  }
 
-  
-  .resume {
+.resume {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* anima la propiedad 'opacity' durante 0.5 segundos con un efecto suave 'ease-in-out' */
-  }
-  
-  .resume.hidden {
+    transition: opacity 0.5s ease-in-out;
+    /* anima la propiedad 'opacity' durante 0.5 segundos con un efecto suave 'ease-in-out' */
+}
+
+.resume.hidden {
     opacity: 0;
-  }
-  
- .contenedor-img-car {
+}
+
+.contenedor-img-car {
     width: 100vw;
     height: 70vh;
     display: flex;
@@ -43,16 +44,17 @@
     justify-items: center;
     position: relative;
     z-index: 0;
-} 
+}
 
-  
+
 .img-config {
     width: 100vw;
     height: 110vh;
     position: relative;
+    object-fit: contain;
     z-index: 0;
     margin-top: -25vh;
-      transform: translateX(100%);
+    transform: translateX(100%);
     animation: aparecer-izquierda 2s forwards;
 }
 
@@ -60,62 +62,69 @@
     from {
         transform: translateX(100%);
     }
+
     to {
         transform: translateX(0);
     }
-  
+
 }
-.section-btn-resume{
+
+.section-btn-resume {
     background: black;
     height: 10vh;
 }
+
 .btn-123 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
+
 .Btn-custome {
     margin-top: 1rem;
-  display: flex;
-  color: white;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
-  box-shadow: #070707 0px 0px 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  transition: all 250ms linear;
-  }
-.resume{
+    display: flex;
+    color: white;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
+    box-shadow: #070707 0px 0px 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    transition: all 250ms linear;
+}
+
+.resume {
     width: 100%;
     height: 100%;
-   
-    
+
+
 }
+
 .div-color {
     width: 40vw;
-    height:100vh;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.233) ;
+    background: rgba(0, 0, 0, 0.233);
     clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
-  }
- 
+}
+
 .div-color2 {
     width: 40vw;
-    height:100vh;
+    height: 100vh;
     position: relative;
     top: 0;
     left: 0;
     z-index: 2;
     margin-top: 50;
-    background: rgba(0, 0, 0, 0.233) ;
+    background: rgba(0, 0, 0, 0.233);
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
 }
+
 .section-custom {
     width: 100vw;
     display: flex;
@@ -125,14 +134,13 @@
 .section-prev-custom {
     width: 60vw;
     z-index: 1;
-  
+
 }
 
 /*color*/
 .section-color {
-    width: 18vw;
     height: 10vh;
-    margin-left: 4vw;
+    margin-left: 1rem;
     display: flex;
     justify-content: flex-start;
     transform: translateX(-100%);
@@ -143,6 +151,7 @@
     from {
         transform: translateX(-100%);
     }
+
     to {
         transform: translateX(0);
     }
@@ -151,36 +160,39 @@
 .title-color {
     margin-top: 30vh;
     margin-left: 0;
-    width: 20vw;
-    height: 9vh;
+    width: fit-content;
+    font-weight: 300;
+    height: fit-content;
     background: rgb(6, 6, 6);
-    padding: 1rem;
+    padding: 2rem 4rem 2rem 1rem;
     color: rgb(255, 254, 254);
     font-size: 2rem;
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
+
 .color-1 {
-    width: 3vw;
-    height: 7vh;
+    width: 4rem;
+    height: 4rem;
     margin: 1rem;
     margin-left: 0;
-   
+    object-fit: contain;
+    z-index: 5;
 }
+
 .rim-1 {
-    width: 6vw;
-    height: 13vh;
+    width: 5rem;
+    height: 5rem;
     margin: 1rem;
     margin-left: 0;
-   
+    object-fit: contain;
 }
-button{
-    border:none
+
+button {
+    border: none
 }
+
 /*rim*/
 .section-color2 {
-    width: 18vw;
-    height: 10vh;
-    margin-left: 20vw;
     display: flex;
     justify-content: flex-end;
     transform: translateX(100%);
@@ -191,68 +203,79 @@ button{
     from {
         transform: translateX(100%);
     }
+
     to {
         transform: translateX(0);
     }
 }
 
 .title-color2 {
-    margin-top: 70vh;
+    margin-top: 60vh;
     margin-left: 20vw;
-    width: 20vw;
-    height: 9vh;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 300;
     background: rgb(6, 6, 6);
-    padding: 1rem;
+    padding: 1rem 2rem;
     color: rgb(255, 254, 254);
     font-size: 2rem;
     text-align: end;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
 }
+
 .color-2 {
     width: 5vw;
-    height:11vh;
+    height: 11vh;
     margin: 1rem;
     margin-left: 0;
-    
+
 }
+
 /*SECCION RESUME*/
 .resume {
     opacity: 0;
     height: 0;
     overflow: hidden;
     transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
-  }
-  .resume.visible {
+}
+
+.resume.visible {
     opacity: 1;
     height: auto;
-  }
-.contenedor-resume-custom{
+}
+
+.contenedor-resume-custom {
     display: flex;
     flex-direction: row;
 }
-.img-resume{
+
+.img-resume {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-.image-resume{
+
+.image-resume {
     width: 100%;
     height: auto;
 }
-.resume-info{
+
+.resume-info {
     background: rgba(10, 10, 10, 0.368);
     width: 50%;
 }
-.info-item-resume{
+
+.info-item-resume {
     display: flex;
     flex-direction: row;
     background: rgba(255, 255, 255, 0.464);
     margin: 1rem;
     justify-content: space-between;
 }
-.section-addcart{
+
+.section-addcart {
     margin: 1rem;
     padding: 1rem;
     display: flex;
