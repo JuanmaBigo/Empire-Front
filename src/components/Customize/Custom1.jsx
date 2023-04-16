@@ -56,6 +56,7 @@ export default function Custom() {
     let colors = useSelector(store => store.colors.colors)
     let rims = useSelector(store => store.rim.rim)
     let car = useSelector(store => store.model.car)
+    console.log(car)
 
     const handleOptionChange = (event) => {
         setSelectedOption(event.target.value);
@@ -211,21 +212,21 @@ export default function Custom() {
                             <div className='resume-info'>
                                 <div className='info-item-resume'>
                                     <div><h1>{car?.name}</h1></div>
-                                    <div><h1>${(car?.price).toLocaleString("es-VE")}</h1></div>
+                                    <div><h1>${(car?.price)?.toLocaleString("es-VE")}</h1></div>
                                 </div>
                                 <div className='info-item-resume'>
                                     <div><h1>{colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.name}</h1></div>
-                                    <div><h1>${(colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color).toLocaleString("es-VE")}</h1></div>
+                                    <div><h1>${(colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color)?.toLocaleString("es-VE")}</h1></div>
                                 </div>
                                 <div className='info-item-resume'>
                                     <div><h1>{rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.name}</h1></div>
-                                    <div><h1>${(rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim).toLocaleString("es-VE")}</h1></div>
+                                    <div><h1>${(rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h1></div>
                                 </div>
                                 <div className='section-addcart'>
                                     <h2>TOTAL</h2>
                                 </div>
                                 <div className='section-addcart'>
-                                    <h2>${(car?.price + colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim).toLocaleString("es-VE")}</h2>
+                                    <h2>${(car?.price + colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h2>
                                 </div>
                                 <div className='section-addcart'>
                                     <button className='Btn-custome' onClick={handleItem}>ADD TO CART</button>
