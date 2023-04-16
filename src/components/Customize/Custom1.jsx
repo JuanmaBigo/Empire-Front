@@ -54,6 +54,7 @@ export default function Custom() {
     let colors = useSelector(store => store.colors.colors)
     let rims = useSelector(store => store.rim.rim)
     let car = useSelector(store => store.model.car)
+    console.log(car)
 
     const handleOptionChange = (event) => {
         setSelectedOption(event.target.value);
