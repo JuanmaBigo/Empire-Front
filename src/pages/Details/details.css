@@ -215,6 +215,8 @@
     margin: 0;
     right: 0;
     margin-top: 6rem;
+    margin-left: 2rem;
+    font-size: 2rem;
   }
 
   .speedDetails {
@@ -235,19 +237,20 @@
 
 @media screen and (max-width: 550px) {
   .speedDetails {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .carDetails {
-    padding-left: 2rem;
-  }
-  .text-details-cars{
-    display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
-    width: 300px;
+  }
+  .carDetails{
+    width: fit-content;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .text-details-cars{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
   }
   .text-details-cars p{
     font-size: 1rem;
