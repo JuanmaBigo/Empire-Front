@@ -33,28 +33,32 @@ export default function Custom() {
     }, []);
 
     useEffect(() => {
+        if (loaded2 === true){
             dispatch(getAllRims(selectedColor))
+        }
     }, [selectedColor, selectedRim, loaded2]);
 
     setTimeout(() => {
         setLoaded(true) //dice que ya cargo la pagina para traer los colores
-    }, 100);
+    }, 200);
 
     setTimeout(() => {
         setLoaded2(true)  //dice que ya cargo la pagina para traer las llantas
     }, 600);
 
     useEffect(() => {  //solo al pricipio
+        if(colors.length > 0){
+            console.log('colores', colors)
         dispatch(getAllRims(colors[0]?._id))
         setSelectedColor(colors[0]?._id)
         setSelectedRim(rims[0]?._id)
         setPhotoVehicle(rims[0]?.photo)
+        }
     }, [loaded, loaded2]);
 
     let colors = useSelector(store => store.colors.colors)
     let rims = useSelector(store => store.rim.rim)
     let car = useSelector(store => store.model.car)
-    console.log(car)
 
     const handleOptionChange = (event) => {
         setSelectedOption(event.target.value);
