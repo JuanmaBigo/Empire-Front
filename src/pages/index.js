@@ -22,6 +22,7 @@ import OrdersUsers from './OrdersUsers/OrdersUsers';
 import AIEngine from './AIEngine/AIEngine';
 
 import { createBrowserRouter } from "react-router-dom"
+import AddStock from './AddStock/AddStock';
 
 
 
@@ -53,6 +54,7 @@ export const router = createBrowserRouter([
             {path:'details/:id/customize', element: <Custome/>},
             {path:'AIEngine', element: <AIEngine />},
             {path: 'completed-purchase', element: <CompletedPurchase/>},
+            {path: 'add-stock', element: <AddStock/>},
         ]
     } 
     

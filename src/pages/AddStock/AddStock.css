@@ -1,0 +1,79 @@
+.add-stock-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    align-items: center;
+}
+
+.add-stock-title {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.input-stock {
+    display: flex;
+    gap: 2rem;
+    height: 2rem;
+    margin-left: 2rem;
+    margin-top: 5rem;
+}
+
+.input-updated-stock {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.stock{
+    height: 100%;
+    padding-left: 0.5rem;
+    width: 4rem;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.select-input-stock{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.select-input-stock:focus{
+    outline: none;
+}
+
+.stock-btn {
+    width: 10rem;
+    height: 2rem;
+    margin-top: 3rem;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
+    box-shadow: #070707 0px 0px 2px;
+}
+
+.stock-btn:hover{
+    cursor: pointer;
+}
+
+.car-photo-stock {
+    width: 50vw;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.actual-stock {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+.actual-stock p {
+    font-size: 20px;
+}
