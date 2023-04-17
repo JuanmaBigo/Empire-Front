@@ -15,6 +15,7 @@ import Details from './Details/Details';
 import Carrito from './Carrito/Carrito';
 import Custome from './Custome/Custome'
 import CompletedPurchase from './CompletedPurchase/CompletedPurchase'
+import OrdersUsers from './OrdersUsers/OrdersUsers';
 
 import AIEngine from './AIEngine/AIEngine';
 
@@ -49,7 +50,7 @@ export const router = createBrowserRouter([
             {path:'select-model', element: <SelectModel/>},
             {path:'details/:id/customize', element: <Custome/>},
             {path:'AIEngine', element: <AIEngine />},
-            {path: 'completed-purchase', element: <CompletedPurchase/>}
+            {path: 'completed-purchase', element: <CompletedPurchase/>},
         ]
     } 
     
