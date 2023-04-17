@@ -38,6 +38,7 @@ export default function NavBody({ handleRender }) {
                     <Anchor to='/AIEngine' className='header-component'>AI ENGINE</Anchor>
                     <Anchor to='/art&culture' className='header-component'>ART & CULTURE</Anchor>
                     <Anchor to='/services' className='header-component'>CONTACT US</Anchor>
+                    {token ? <Anchor to='/cart' className='header-component'>CART</Anchor> : null}
                     {token === null ? <Anchor to='/signin' className='header-component'>LOGIN</Anchor> : null}
                     {token === null ? <Anchor to='/register' className='header-component'>REGISTER</Anchor> : null}
                     {user?.admin? <Anchor to='/add-stock' className='header-component'>ADD STOCK</Anchor> : null}
