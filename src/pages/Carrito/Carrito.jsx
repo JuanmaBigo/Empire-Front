@@ -13,11 +13,27 @@ export default function Cart() {
   let token = localStorage.getItem('token')
   let headers = { headers: { 'Authorization': `Bearer ${token}` } }
 
+  useEffect(
+    () => {
+      axios.get(url, headers)
+            .then(response => {setData(response.data.item)
+            setTotal(response.data.total)
+            })
+    }, []
+  )
+  
+  if (!data) {
+    return <p>Cargando...</p>
+  }
+
   const handleClick = async () => {
+    let description = data.forEach(element => element.car_id.name)
+
     let pay = {
-      title: "hola package",
-      description: "carro lindo",
-      price: 1
+      title: "Compra/Reservacion",
+      description,
+      image: "https://www.fcbarcelona.com/fcbarcelona/photo/2022/08/02/ae5252d1-b79b-4950-9e34-6e67fac09bb0/LeoMessi20092010_pic_fcb-arsenal62.jpg",
+      price: total
     };
   
     try {
@@ -32,7 +48,7 @@ export default function Cart() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",})
+        theme: "light",}, )
     } catch (error) {
       if (error.response) {
         if (typeof error.response.data.message === "string") {
@@ -50,18 +66,7 @@ export default function Cart() {
     }
   };
 
-  useEffect(
-    () => {
-      axios.get(url, headers)
-            .then(response => {setData(response.data.item)
-            setTotal(response.data.total)
-            })
-    }, []
-  )
 
-  if (!data) {
-    return <p>Cargando...</p>
-  }
   
 console.log(data)
   return (  
