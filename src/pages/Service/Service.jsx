@@ -8,7 +8,7 @@ export default function Service() {
     <>
       <div className='contenedor-servicepage'>
         <div className='titles-service-page'>
-          <img className='empire-servicepage-img' src='./image/title-empire-service.png' alt='title museum' />
+          <img className='empire-servicepage-img' src='./image/contact-us-text.png' alt='title museum' />
         </div>
         <div className='section-btn-service'>
           <Anchor to='contact' className='btn-servicepage'>CONTACT US</Anchor>
