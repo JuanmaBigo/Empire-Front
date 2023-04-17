@@ -1,0 +1,32 @@
+.container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 18rem;
+    height: 20rem;
+    background-color: black;
+    padding: 1rem;
+}
+.img {
+    width: 15rem;
+    margin-left: 1.5rem;
+}
+.container-card h2 {
+    color: white;
+    margin-left: 3.5rem;
+    font-size: 30px;
+
+}
+.container-card h3 {
+    color: white;
+    margin-top: 1.5rem;
+    font-size: 20px;
+}
+.container-card p {
+    font-size: 15px;
+}
+.div-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
