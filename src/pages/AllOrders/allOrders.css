@@ -1,0 +1,28 @@
+.container-card-user{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.title-orders {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(106,106,111,1) 50%, rgba(253,255,255,1) 100%);
+    width: 20rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.title-orders h1 {
+    color: white;
+}
+.container-cards {
+    width: 100%;
+    padding: 0rem 8rem 8rem 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
