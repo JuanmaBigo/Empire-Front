@@ -5,6 +5,7 @@ import colorActions from '../../store/color/actions'
 import rimActions from '../../store/rims/actions'
 import apiUrl from '../../configHost.js'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 import { Link as Anchor } from 'react-router-dom'
 import { useParams } from "react-router"
 import modelActions from "../../store/model/actions.js"
@@ -25,6 +26,7 @@ export default function Custom() {
     const [selectedOption, setSelectedOption] = useState('option 1');
     const [selectedOptionRim, setSelectedOptionRim] = useState('option rim 1');
     const [photoVehicle, setPhotoVehicle] = useState('')
+    let navigate = useNavigate()
 
     const dispatch = useDispatch()
 
@@ -94,6 +96,7 @@ export default function Custom() {
 
         try {
             await axios.post(url, data, headers)
+            navigate("/cart")
         } catch (error) {
             console.log(error)
         }
