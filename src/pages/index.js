@@ -20,7 +20,6 @@ import OrdersUsers from './OrdersUsers/OrdersUsers';
 
 
 import AIEngine from './AIEngine/AIEngine';
-
 import { createBrowserRouter } from "react-router-dom"
 import AddStock from './AddStock/AddStock';
 
@@ -49,7 +48,7 @@ export const router = createBrowserRouter([
             {path:'services/contact-us', element: <ContactUs />},
             {path:'vehicles', element: <Vehicles/>},
             {path:'details/:id',element:<Details/>},
-            {path:'carrito', element: <Carrito />},
+            {path:'cart', element: <Carrito />},
             {path:'select-model', element: <SelectModel/>},
             {path:'details/:id/customize', element: <Custome/>},
             {path:'AIEngine', element: <AIEngine />},
