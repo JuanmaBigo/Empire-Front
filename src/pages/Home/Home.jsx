@@ -11,12 +11,12 @@ export default function Home() {
           <h1 className='title-principal'>VEHICLES</h1>
         </Anchor>
 
-        <Anchor to='/art&culture' className='contenedor-img-principalpage-2'>
-          <h1 className='title-principal'>ART & CULTURE</h1>
+        <Anchor to='/AIEngine' className='contenedor-img-principalpage-2'>
+          <h1 className='title-principal'>AI ENGINE</h1>
         </Anchor>
 
-        <Anchor to='/services' className='contenedor-img-principalpage-3'>
-          <h1 className='title-principal'>SERVICES</h1>
+        <Anchor to='/art&culture' className='contenedor-img-principalpage-3'>
+          <h1 className='title-principal'>ART & CULTURE</h1>
         </Anchor>
 
 
