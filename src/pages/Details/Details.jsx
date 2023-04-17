@@ -15,16 +15,23 @@ const Details = () => {
   const params = useParams()
   const dispatch = useDispatch()
   const [loaded, setLoaded] = useState(false)
+  const [reload, setReload] = useState(false)
 
   const data = useSelector((store) => store.model.car)
   useEffect(() => {
     dispatch(getOne({ _id: params.id }))
   }, [])
 
-  setTimeout(() => {
-    setLoaded(true)
-    console.log("...loaded")
-  }, 100);
+  useEffect(() => {
+    setTimeout(() => {
+      if (data._id === params.id) {
+        console.log(data)
+        setLoaded(true)
+      } else {
+        setReload(!reload)
+      }
+    }, 100);
+  }, [reload])
 
   return (
     <>

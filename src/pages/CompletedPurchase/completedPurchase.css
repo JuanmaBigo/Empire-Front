@@ -1,0 +1,54 @@
+.container-completed {
+    height: 100vh;
+    background-image: url('../../images/completedpurchase.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 8rem;
+}
+.container-completed img {
+    width: 50rem;
+    height: 20rem;
+}
+.container-completed h2 {
+    color: white;
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.425);
+    font-size: 45px;
+    text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .container-completed {
+        background-position: -250px 50%;
+        gap: 3rem;
+    }
+    .container-completed img {
+        width: 15rem;
+        height: 5rem;
+        margin-top: 8rem;
+    }
+    .container-completed h2 {
+        font-size: 30px;
+        margin: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container-completed {
+        gap: 3rem;
+    }
+    .container-completed img {
+        width: 25rem;
+        height: 10rem;
+        margin-top: 8rem;
+        
+    }
+    .container-completed h2 {
+        font-size: 30px;
+        margin: 1rem;
+    }
+}

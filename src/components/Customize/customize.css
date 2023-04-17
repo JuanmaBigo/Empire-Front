@@ -22,8 +22,10 @@
     margin-top: 10vh;
     position: relative;
     z-index: 1;
-
+    object-fit: contain;
 }
+
+
 
 .contenedor-img-car {
     width: 100vw;
@@ -40,6 +42,7 @@
     width: 100vw;
     height: 110vh;
     position: relative;
+    object-fit: contain;
     z-index: 0;
     margin-top: -25vh;
     transform: translateX(100%);
@@ -120,9 +123,8 @@
 
 /*color*/
 .section-color {
-    width: 18vw;
     height: 10vh;
-    margin-left: 4vw;
+    margin-left: 1rem;
     display: flex;
     justify-content: flex-start;
     transform: translateX(-100%);
@@ -142,29 +144,28 @@
 .title-color {
     margin-top: 30vh;
     margin-left: 0;
-    width: 20vw;
-    height: 9vh;
+    width: fit-content;
+    font-weight: 300;
+    height: fit-content;
     background: rgb(6, 6, 6);
-    padding: 1rem;
+    padding: 2rem 4rem 2rem 1rem;
     color: rgb(255, 254, 254);
     font-size: 2rem;
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
 
 .color-1 {
-    width: 3vw;
-    height: 7vh;
+    width: 4rem;
+    height: 4rem;
     margin: 1rem;
     margin-left: 0;
-
 }
 
 .rim-1 {
-    width: 6vw;
-    height: 13vh;
+    width: 5rem;
+    height: 5rem;
     margin: 1rem;
     margin-left: 0;
-
 }
 
 button {
@@ -173,9 +174,6 @@ button {
 
 /*rim*/
 .section-color2 {
-    width: 18vw;
-    height: 10vh;
-    margin-left: 20vw;
     display: flex;
     justify-content: flex-end;
     transform: translateX(100%);
@@ -193,12 +191,13 @@ button {
 }
 
 .title-color2 {
-    margin-top: 70vh;
+    margin-top: 60vh;
     margin-left: 20vw;
-    width: 20vw;
-    height: 9vh;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 300;
     background: rgb(6, 6, 6);
-    padding: 1rem;
+    padding: 1rem 2rem;
     color: rgb(255, 254, 254);
     font-size: 2rem;
     text-align: end;

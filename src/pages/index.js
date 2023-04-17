@@ -14,10 +14,12 @@ import ContactUs from './ContactUs/ContactUs';
 import Details from './Details/Details';
 import Carrito from './Carrito/Carrito';
 import Custome from './Custome/Custome'
+import CompletedPurchase from './CompletedPurchase/CompletedPurchase'
 
 import AIEngine from './AIEngine/AIEngine';
 
 import { createBrowserRouter } from "react-router-dom"
+
 
 
 //let token = localStorage.getItem('token')
@@ -47,6 +49,7 @@ export const router = createBrowserRouter([
             {path:'select-model', element: <SelectModel/>},
             {path:'details/:id/customize', element: <Custome/>},
             {path:'AIEngine', element: <AIEngine />},
+            {path: 'completed-purchase', element: <CompletedPurchase/>}
         ]
     } 
     
