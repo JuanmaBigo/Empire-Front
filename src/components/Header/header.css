@@ -12,6 +12,7 @@ header{
 .logo{
     width: 10vh;
     height: 15vh;
+    object-fit: contain;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
