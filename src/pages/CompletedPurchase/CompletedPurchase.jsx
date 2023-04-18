@@ -33,7 +33,7 @@ export default function CompletedPurchase() {
         user_id: "64377af3968955ae96af8f9a",
         payment_id: paymentId,
         totalPrice: purchaseAmount,
-        status: status,
+        status: "pending",
         payment_method: paymentMethod,
       };
 
