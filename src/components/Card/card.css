@@ -31,3 +31,7 @@
     border-radius: 100px;
     border: none;
 }
+
+.cards-carrito .btn-close:hover{
+    cursor: pointer;
+}
