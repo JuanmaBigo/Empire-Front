@@ -89,6 +89,10 @@
     height: 10rem;
     object-fit: cover;
 }
+<<<<<<< HEAD
+.orders-page h2, .orders-page h3, .orders-page h4, .orders-page h5, .orders-page span{
+=======
 .orders-page h2, h3, h4, h5, span{
+>>>>>>> 75c87b2f1517b23cadb3580c097fe485d047fa8c
     color: #222;
 }

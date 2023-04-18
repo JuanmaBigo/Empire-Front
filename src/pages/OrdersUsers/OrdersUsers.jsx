@@ -24,7 +24,7 @@ useEffect (
 )
 console.log(orders)
   return (
-    <>
+    <div className='orders-user-page'>
     <div className='container'>
             <h1 className='orders-title'>MY ORDERS</h1>
             <p>the place where you will find your purchase orders and their details</p>
@@ -33,6 +33,6 @@ console.log(orders)
         <div className='container-cards' ref={scrollRef}>
             <CardUser orders={orders} />
         </div>
-    </>
+    </div>
   )
 }
