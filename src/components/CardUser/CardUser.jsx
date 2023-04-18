@@ -32,7 +32,6 @@ export default function CardUser({orders}) {
               </div>
               ))
             }
-
     </>
   )
 }
