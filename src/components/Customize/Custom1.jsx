@@ -198,15 +198,7 @@ export default function Custom() {
                 </div>
             </div>
             <div>
-                <div className='section-btn-resume'>
-                    <div className='btn-123'>
-                        <button className='Btn-custome' onClick={handleResumeButtonClick}>
-                            ADD TO RESUME
-                        </button>
-                    </div>
-                </div>
-                <div className={`resume ${showResume ? 'visible' : ''}`}>
-                    <div>
+                    <div className='resume-section'>
                         <div className='contenedor-resume-custom'>
                             <div className='img-resume'>
                                 <img
@@ -215,33 +207,51 @@ export default function Custom() {
                                     className='image-resume'
                                 />
                             </div>
+
                             <div className='resume-info'>
+                                <h2 className='resume-title'>RESUME</h2>
                                 <div className='info-item-resume'>
-                                    <div><h1>{car?.name}</h1></div>
-                                    <div><h1>${(car?.price)?.toLocaleString("es-VE")}</h1></div>
+                                    <div>
+                                        <h3>BASE</h3>
+                                        <p>{car?.name}</p>
+                                    </div>
+                                    <div>
+                                        <h1>${(car?.price)?.toLocaleString("es-VE")}</h1>
+                                    </div>
                                 </div>
                                 <div className='info-item-resume'>
-                                    <div><h1>{colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.name}</h1></div>
-                                    <div><h1>${(colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color)?.toLocaleString("es-VE")}</h1></div>
+                                    <div>
+                                        <h3>COLOR</h3>
+                                        <p>{colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.name}</p>
+                                    </div>
+                                    <div>
+                                        <h1>${(colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color)?.toLocaleString("es-VE")}</h1>
+                                    </div>
                                 </div>
+
                                 <div className='info-item-resume'>
-                                    <div><h1>{rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.name}</h1></div>
-                                    <div><h1>${(rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h1></div>
+                                    <div>
+                                        <h3>RIMS</h3>
+                                        <p>{rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.name}</p>
+                                    </div>
+                                    <div>
+                                        <h1>${(rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h1>
+                                    </div>
                                 </div>
-                                <div className='section-addcart'>
-                                    <h2>TOTAL</h2>
-                                </div>
-                                <div className='section-addcart'>
+
+                                <div className='section-addcart1 section-addcart'>
+                                    <h2>GRAND TOTAL</h2>
                                     <h2>${(car?.price + colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h2>
                                 </div>
                                 <div className='section-addcart'>
-                                    <button className='Btn-custome' onClick={handleItem}>ADD TO CART</button>
+                                    <h2>RESERVATION</h2>
+                                    <h2>${(car?.reservePrice + colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h2>
                                 </div>
+                                <button className='Btn-custome' onClick={handleItem}>ADD TO CART</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }
