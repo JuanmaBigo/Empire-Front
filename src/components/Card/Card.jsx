@@ -6,9 +6,9 @@ import Image from '../Image/Image'
 import imgclose from '../../images/close2.png'
 import apiUrl from '../../configHost'
 
-export default function Card({i}) {
+export default function Card({ i }) {
   const [data, setData] = useState([])
-  
+
   let url = `${apiUrl}items`
   let token = localStorage.getItem('token')
   let headers = { headers: { 'Authorization': `Bearer ${token}` } }
@@ -16,53 +16,60 @@ export default function Card({i}) {
   useEffect(
     () => {
       axios.get(url, headers)
-            .then(response => setData(response?.data?.item))
+        .then(response => setData(response?.data?.item))
     }, []
   )
 
 
-  // const handelClose = async () => {
-  //   try {
-  //     await axios.delete(url, headers)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
+  const handleClose = async () => {
 
-  // }
+    let url = `${apiUrl}items/${i._id}`
+    let token = localStorage.getItem('token')
+    let headers = { headers: { 'Authorization': `Bearer ${token}` } }
+
+    console.log(url)
+    try {
+      await axios.put(url, headers)
+      window.location.reload();
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
 
   return (
     < >
-    <div >
+      <div className='cards-carrito'>
         <div className='div-img'>
-            <Image className='img' src={i.rim_id.photo} />
+          <Image className='img' src={i.rim_id.photo} />
         </div>
         <div className='container-card'>
           <div className='div-card'>
             <h2>RESUME</h2>
-            <button className='btn-close' ><img className='close' src={imgclose} alt="close" /></button>
+            <button className='btn-close' onClick={handleClose}><img className='close' src={imgclose} alt="close" /></button>
           </div>
           <div className='div-card'>
             <h3>BASE <p>{i.car_id.name}</p></h3>
-            <h3>{i.car_id.price}</h3>
+            <h3>{(i.car_id.price).toLocaleString("es-VE")}</h3>
           </div>
           <div className='div-card'>
             <h3>COLOR <p>{i.color_id.name}</p></h3>
-            <h3>{i.color_id?.price_color}</h3>
+            <h3>{(i.color_id?.price_color).toLocaleString("es-VE")}</h3>
           </div>
           <div className='div-card'>
             <h3>RIM SELECTION <p>{i.rim_id.name}</p></h3>
-            <h3>{i.rim_id.price_rim}</h3>
+            <h3>{(i.rim_id.price_rim).toLocaleString("es-VE")}</h3>
           </div>
           <div className='div-card'>
             <h3>TOTAL </h3>
-              <h3>{i.car_id.price + i.color_id.price_color + i.rim_id.price_rim}</h3>
+            <h3>{(i.car_id.price + i.color_id.price_color + i.rim_id.price_rim).toLocaleString("es-VE")}</h3>
           </div>
           <div className='div-card'>
             <h3>RESERVATION </h3>
-            <h3>{i.car_id.reservePrice + i.color_id.price_color + i.rim_id.price_rim}</h3>
+            <h3>{(i.car_id.reservePrice + i.color_id.price_color + i.rim_id.price_rim).toLocaleString("es-VE")}</h3>
           </div>
         </div>
-        </div>
+      </div>
     </>
   )
 }

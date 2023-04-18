@@ -1,32 +1,33 @@
-.container-card {
+.cards-carrito .container-card {
     width: 18rem;
-    height: 26rem;
+    height: 30rem;
     background-color: black;
     padding: 1rem;
 }
-.img {
+.cards-carrito .img {
     width: 15rem;
     margin-left: 1.5rem;
 }
-.container-card h2 {
+.cards-carrito .container-card h2 {
     color: white;
     margin-left: 4rem;
 }
-.container-card h3 {
+.cards-carrito .container-card h3 {
     color: white;
     margin-top: 1.5rem;
 }
-.close {
+.cards-carrito .close {
     width: 2rem;
 }
-.div-card {
+.cards-carrito .div-card {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
 }
-.btn-close {
+.cards-carrito .btn-close {
+    margin-right: 1rem;
     width: 2rem;
-    margin-left: 2rem;
     background-color: black;
     border-radius: 100px;
+    border: none;
 }
