@@ -1,28 +1,57 @@
-.container-card-user{
-    padding-top: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-.title-orders {
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(106,106,111,1) 50%, rgba(253,255,255,1) 100%);
-    width: 20rem;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5rem;
-}
-.title-orders h1 {
+
+button{
+    padding: 1rem;
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    border: 1px solid white;
+    background-color: transparent;
     color: white;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
 }
-.container-cards {
-    width: 100%;
-    padding: 0rem 8rem 8rem 8rem;
+p{
+    font-size: 1.2rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.container-cards{
+ min-height: 100vh;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ justify-content: center;
+ align-items: center;
+ background-color: white;
+
+}
+.orders-section{
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    
+}
+.card{
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    padding: 3rem!important;
+    border-radius: .1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: .1rem;
+    -moz-border-radius: .1rem;
+    -ms-border-radius: .1rem;
+    -o-border-radius: .1rem;
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 4px;
+ background-color: #ebebeb;
+
 }

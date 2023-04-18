@@ -28,9 +28,9 @@ export default function CompletedPurchase() {
    
       const token = localStorage.getItem('token');
       const headers = { headers: { Authorization: `Bearer ${token}` } };
-
+      console.log(token)
       const data = {
-        user_id: "64377af3968955ae96af8f9a",
+        user_id: "643dfc12a0c4ab79b3ce1c05",
         payment_id: paymentId,
         totalPrice: purchaseAmount,
         status: "pending",

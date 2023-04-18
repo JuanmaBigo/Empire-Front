@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './ordersUsers.css'
 import axios from 'axios'
 import CardUser from '../../components/CardUser/CardUser'
@@ -6,9 +6,15 @@ import apiUrl from '../../configHost'
 
 export default function OrdersUsers() {
   const [orders, setOrders] = useState([])
+  const scrollRef = useRef(null);
+
   const url = `${apiUrl}orders`;
   const token = localStorage.getItem('token');
   const headers = { headers: { Authorization: `Bearer ${token}` } };
+  const handleScrollToBottom = () => {
+    // Hacer scroll suave hacia abajo
+    scrollRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
 
 useEffect (
   () => {
@@ -18,13 +24,15 @@ useEffect (
 )
 console.log(orders)
   return (
-    <div className='container-card-user'>
-        <div className='title-orders'>
-            <h1>MY ORDERS</h1>
-        </div>
-        <div className='container-cards'>
+    <>
+    <div className='container'>
+            <h1 className='orders-title'>MY ORDERS</h1>
+            <p>the place where you will find your purchase orders and their details</p>
+            <button onClick={handleScrollToBottom}>View More</button>
+    </div>
+        <div className='container-cards' ref={scrollRef}>
             <CardUser orders={orders} />
         </div>
-    </div>
+    </>
   )
 }
