@@ -3,8 +3,7 @@ import './cardUser.css'
 import Image from '../Image/Image'
 
 
-export default function CardUser
-() {
+export default function CardUser({orders}) {
   return (
     < >
     <div >
@@ -16,7 +15,7 @@ export default function CardUser
             <h2>REVUELTO</h2>
           </div>
           <div className='div-card'>
-            <h3>COLOR <p>Arancio Borealis</p></h3>
+            <h3>COLOR <p>{}</p></h3>
           </div>
           <div className='div-card'>
             <h3>RIM SELECTION <p>Rims Aesir graphite grey</p></h3>

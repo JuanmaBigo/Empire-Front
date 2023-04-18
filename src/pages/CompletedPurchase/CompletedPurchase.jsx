@@ -1,61 +1,63 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import './completedPurchase.css'
-import img from '../../images/Group 41.png'
-import apiUrl from '../../configHost'
+import React, { useState, useEffect } from 'react';
+import {toast, Toaster } from 'react-hot-toast';
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import './completedPurchase.css';
+import img from '../../images/Group 41.png';
+import apiUrl from '../../configHost';
 
 export default function CompletedPurchase() {
-  
   const location = useLocation();
+  let navigate = useNavigate()
   const searchParams = new URLSearchParams(location.search);
-  const [purchaseAmount, setPurchaseAmount] = useState()
-  const [itemId, setItemId] = useState()
-  const paymentId = searchParams.get('payment_id');
-  const status = searchParams.get('status');
-  const paymentMethod = searchParams.get('payment_type');
-  let url = `${apiUrl}orders`
-  let url1 = `${apiUrl}items`
-  let token = localStorage.getItem('token')
-  let headers = { headers: { 'Authorization': `Bearer ${token}` } }
+  const [purchaseAmount, setPurchaseAmount] = useState();
+  let status = searchParams.get('status')
+  let paymentId = searchParams.get('payment_id')
+  let paymentMethod = searchParams.get('payment_type')
+  const url = `${apiUrl}orders`;
+  const urlI = `${apiUrl}items`;
+  const token = localStorage.getItem('token');
+  const headers = { headers: { Authorization: `Bearer ${token}` } };
 
-  useEffect(
-    () => {
-      axios.get(url1, headers)
-            .then(response => {setPurchaseAmount(response.data)
-              setItemId(response.data._id)
-            })
-    }, [])
+  async function getData () {
+    await axios.get(urlI, headers)
+               .then(res => setPurchaseAmount(res.data.total))
+    
+    if (status === 'approved') {
+   
+      const token = localStorage.getItem('token');
+      const headers = { headers: { Authorization: `Bearer ${token}` } };
 
-    console.log(purchaseAmount)
-    console.log(itemId)
+      const data = {
+        user_id: "64377af3968955ae96af8f9a",
+        payment_id: paymentId,
+        totalPrice: purchaseAmount,
+        status: status,
+        payment_method: paymentMethod,
+      };
 
-  let data = {
-    payment_id:  paymentId,
-    // products:  itemId,
-    totalPrice:  purchaseAmount,
-    status:  status,
-    payment_method: paymentMethod,
-  }
-
-  if (status == "approved") {
-    axios.post(url, data, headers)
-         .then(res => console.log(res))
-  }
-
-  console.log(paymentId)
-  console.log(status)
-
+// console.log(data)
+      await axios.post(url, data, headers).then(res => res);
+      toast.success("Order was succesfully created")
+      setTimeout(() => {
+        navigate("/orders")
+      }, 2000);
+    }
+  } 
+  useEffect(() => {
+      getData()
+  }, [status, searchParams, paymentId, paymentMethod, purchaseAmount]);
 
   return (
     <div className='container-completed'>
-        <div>
-            <img src={img} alt="logo" />
-        </div>
-        <div>
-            <h2>Your payment was made, an advisor will contact you shortly.</h2>
-        </div>
+      <div>
+        <img src={img} alt='logo' />
+      </div>
+      <div>
+        <h2>Your payment was made, an advisor will contact you shortly.</h2>
+      </div>
+      <Toaster position="top-right" reverseOrder={false}/>
     </div>
-  )
+  );
 }
