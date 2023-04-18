@@ -9,6 +9,7 @@ import axios from 'axios';
 
 export default function NavBody({ handleRender }) {
     let token = localStorage.getItem('token')
+    let user = JSON.parse(localStorage.getItem('user'))
 
     async function handleSignout() {
         let headers = { headers: { 'Authorization': `Bearer ${token}` } }
@@ -34,11 +35,13 @@ export default function NavBody({ handleRender }) {
                 <div className='navBtns'>
                     <Anchor to='/home' className='header-component'>HOME</Anchor>
                     <Anchor to='/vehicles' className='header-component'>VEHICLES</Anchor>
-                    <Anchor to='/art&culture' className='header-component'>ART & CULTURE</Anchor>
-                    <Anchor to='/services' className='header-component'>SERVICES</Anchor>
                     <Anchor to='/AIEngine' className='header-component'>AI ENGINE</Anchor>
+                    <Anchor to='/art&culture' className='header-component'>ART & CULTURE</Anchor>
+                    <Anchor to='/services' className='header-component'>CONTACT US</Anchor>
+                    {token ? <Anchor to='/cart' className='header-component'>CART</Anchor> : null}
                     {token === null ? <Anchor to='/signin' className='header-component'>LOGIN</Anchor> : null}
                     {token === null ? <Anchor to='/register' className='header-component'>REGISTER</Anchor> : null}
+                    {user?.admin? <Anchor to='/add-stock' className='header-component'>ADD STOCK</Anchor> : null}
                 </div>
                 {token ? <button className='header-signout' onClick={handleSignout}><p>SIGN OUT</p></button> : null}
             </div>

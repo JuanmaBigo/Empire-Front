@@ -37,6 +37,7 @@ export default function Login() {
           localStorage.setItem('user', JSON.stringify({
             name: res.data.user.name,
             mail: res.data.user.mail,
+            admin: res.data.user.is_admin,
           }))
           navigate('/home');
           window.location.reload();

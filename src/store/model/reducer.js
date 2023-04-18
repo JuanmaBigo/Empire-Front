@@ -1,14 +1,16 @@
 import { createReducer } from "@reduxjs/toolkit";
 import action_AllCars from './actions.js'
 
-const {getAllCars} = action_AllCars
+const { getAllCars, getOne } = action_AllCars
 const initialState = {
-    cars: [],
+  car: [],
+  cars: [],
+
 };
 
 
-const reducer = createReducer ( 
-  initialState, 
+const reducer = createReducer(
+  initialState,
   (builder) => builder
     .addCase(
       getAllCars.fulfilled,
@@ -20,6 +22,17 @@ const reducer = createReducer (
         return newState
       }
     )
+    .addCase(
+      getOne.fulfilled,
+      (state, action) => {
+        let newState = {
+          ...state,
+          car: action.payload.cars
+        }
+        return newState
+      }
+    )
+
 )
 
 export default reducer

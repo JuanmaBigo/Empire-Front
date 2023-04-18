@@ -1,11 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import apiUrl from '../../configHost';
 
 const getAllCars = createAsyncThunk(
   'getAll',
   async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/cars`);
+      let url = `${apiUrl}cars`;
+      const response = await axios.get(url);
       return {
         cars: response.data.car,
       };
@@ -14,8 +16,20 @@ const getAllCars = createAsyncThunk(
     }
   });
 
+  const getOne = createAsyncThunk('getOne', async ({_id})=>{
+    try{
+      let url = `${apiUrl}cars/${_id}`;
+      const response = await axios.get(url)
+      return{
+        cars: response.data.response,
+        
+      }
+    }catch(error){
+      console.log(error)
+    }
+  });
 
-const actions = { getAllCars };
+
+const actions = { getAllCars,getOne};
 
 export default actions;
-

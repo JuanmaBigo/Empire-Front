@@ -1,9 +1,7 @@
-
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import actions from '../../store/model/actions';
 import actionCat from '../../store/categories/actions';
-
 import './model.css';
 import { Link as Anchor } from 'react-router-dom';
 
@@ -22,12 +20,10 @@ export default function Model() {
     const categories = useSelector((store) => store.category.categories);
 
     useEffect(() => {
-        dispatch(getAllCars());
-    }, [dispatch]);
-
-    useEffect(() => {
-        dispatch(getAllCategories());
-    }, [dispatch]);
+        Promise.all([dispatch(getAllCars()), dispatch(getAllCategories())])
+          .catch((error) => console.log(error)); // manejar errores si alguno de los dispatches falla
+      }, [dispatch]);
+      
 
     const prevSlide = () => {
         const lastIndex = (filteredCars?.length || 0) - 1;
@@ -43,67 +39,72 @@ export default function Model() {
         setCurrentIndex(index);
     };
 
-    // Filtrar la lista de autos en función del término de búsqueda y la categoría seleccionada
-    const filteredCars = cars?.filter(car =>
-        (searchFilters.selectedCategory === '' || car.category_id.toString() === searchFilters.selectedCategory.toString()) &&
-        car.name.toLowerCase().includes(searchFilters.searchTerm.toLowerCase())
-      );
+const filteredCars = cars?.filter(car => {
+    const categoryIdMatch = searchFilters.selectedCategory === '' || car?.category_id._id.toString() === searchFilters.selectedCategory.toString();
+    const nameMatch = car.name.toLowerCase().trim(" ").includes(searchFilters.searchTerm.toLowerCase());
+    return categoryIdMatch && nameMatch;
+});
+
+      const photo = filteredCars?.length ? filteredCars[currentIndex]?.photo : null;
+      const name = filteredCars?.length ? filteredCars[currentIndex]?.name : null;
       
 
-    const photo = filteredCars?.[currentIndex]?.photo;
-    const name = filteredCars?.[currentIndex]?.name;
-
-    return (
+      return (
         <div className='contenedor-vehicles'>
-            <div className='section-filter'>
-                <div className='search-name'>
-                    <input
-                        className='search-input'
-                        type="text"
-                        placeholder="  Search"
-                        value={searchFilters.searchTerm}
-                        onChange={(e) => setSearchFilters({ ...searchFilters, searchTerm: e.target.value })}
-                    />
-                </div>
-                <div className='select-option'>
-                    <select
-                        className='select-input'
-                        value={searchFilters.selectedCategory}
-                        onChange={(e) => setSearchFilters({ ...searchFilters, selectedCategory: e.target.value })}
-                    >
-                        <option value="">All</option>
-                        {categories?.map((category) => (
-                            <option key={category?._id} value={category?._id}>{category?.name}</option>
-                        ))}
-
-                    </select>
-
-                </div>
-            </div>
-
-            <div className='contenedor-vehicles-carrusel'>
-                <button className='btn-slide' onClick={prevSlide}>
-                    <img className='img-btn-slide' src="./image/prev.png" alt="Prev" />
-                </button>
-                <Anchor className='section-img-title anchortoCustome' to={`/car-details?id=${filteredCars?.[currentIndex]?._id}`}>
-                    {photo && (
-                        <img
-                            className='photo-vehicles'
-                            src={photo}
-                            alt={`Car model ${filteredCars?.[currentIndex]?.model}`}
-                        />
-                    )}
-                    {name && (
-                        <h1 className={photo ? 'title-name-car' : 'title-name-car no-photo'}>
-                            {name}
-                        </h1>
-                    )}
-                </Anchor>
-                <button className='btn-slide' onClick={nextSlide}>
-                    <img className='img-btn-slide' src="./image/next.png" alt="Next" />
-                </button>
-
-            </div>
+        <div className='vehicles-title'>
+          <h1>MODEL SELECTION</h1>
         </div>
-    );
+          <div className='section-filter'>
+            <div className='search-name'>
+              <input
+                className='search-input'
+                type="text"
+                placeholder="FILTER BY NAME"
+                value={searchFilters.searchTerm}
+                onChange={(e) => setSearchFilters({ ...searchFilters, searchTerm: e.target.value })}
+              />
+            </div>
+            <div className='select-option'>
+              <select
+                className='select-input'
+                value={searchFilters.selectedCategory}
+                onChange={(e) => setSearchFilters({ ...searchFilters, selectedCategory: e.target.value })}
+              >
+                <option value="">category</option>
+                {categories?.map((category) => (
+                  <option key={category?._id} value={category?._id}>{category?.name}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+          {filteredCars.length === 0 ? (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+              <p className='no-match-search'>There is no vehicle that matches your search</p>
+            </div>
+          ) : (
+            <div className='contenedor-vehicles-carrusel'>
+              <button className='btn-slide' onClick={prevSlide}>
+                <img className='img-btn-slide img-btn-slide1' src="./image/prev.png" alt="Prev" />
+              </button>
+              <Anchor className='section-img-title anchortoCustome' to={`/details/${filteredCars?.[currentIndex]?._id}`}>
+                {photo && (
+                  <img
+                    className='photo-vehicles'
+                    src={photo}
+                    alt={`Car model ${filteredCars?.[currentIndex]?.model}`}
+                  />
+                )}
+                {name && (
+                  <h1 className={photo ? 'title-name-car' : 'title-name-car no-photo'}>
+                    {name}
+                  </h1>
+                )}
+              </Anchor>
+              <button className='btn-slide' onClick={nextSlide}>
+                <img className='img-btn-slide img-btn-slide2' src="./image/next.png" alt="Next" />
+              </button>
+            </div>
+          )}
+        </div>
+      );      
 }

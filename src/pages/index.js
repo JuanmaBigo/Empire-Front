@@ -11,10 +11,22 @@ import Vehicles from './Vehicles/Vehicles';
 import Contact from './Contact/Contact'
 import SelectModel from './SelectModel/SelectModel';
 import ContactUs from './ContactUs/ContactUs';
+import Details from './Details/Details';
 import Carrito from './Carrito/Carrito';
+<<<<<<< HEAD
 import AIEngine from './AIEngine/AIEngine';
+=======
+import Custome from './Custome/Custome'
+import CompletedPurchase from './CompletedPurchase/CompletedPurchase'
+import OrdersUsers from './OrdersUsers/OrdersUsers';
 
+>>>>>>> 4d9426e62a2daad123086fff00e7e74fd2ab4fb5
+
+
+import AIEngine from './AIEngine/AIEngine';
 import { createBrowserRouter } from "react-router-dom"
+import AddStock from './AddStock/AddStock';
+
 
 
 //let token = localStorage.getItem('token')
@@ -39,9 +51,14 @@ export const router = createBrowserRouter([
             {path:'services/contact', element: <Contact/>},
             {path:'services/contact-us', element: <ContactUs />},
             {path:'vehicles', element: <Vehicles/>},
-            {path:'carrito', element: <Carrito />},
+            {path:'details/:id',element:<Details/>},
+            {path:'cart', element: <Carrito />},
             {path:'select-model', element: <SelectModel/>},
+            {path:'details/:id/customize', element: <Custome/>},
             {path:'AIEngine', element: <AIEngine />},
+            {path: 'completed-purchase', element: <CompletedPurchase/>},
+            {path: 'add-stock', element: <AddStock/>},
+            {path: 'orders', element: <OrdersUsers/>},
         ]
     } 
     

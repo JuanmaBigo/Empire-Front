@@ -1,6 +1,9 @@
 .container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     width: 18rem;
-    height: 26rem;
+    height: 20rem;
     background-color: black;
     padding: 1rem;
 }
@@ -10,23 +13,20 @@
 }
 .container-card h2 {
     color: white;
-    margin-left: 4rem;
+    margin-left: 3.5rem;
+    font-size: 30px;
+
 }
 .container-card h3 {
     color: white;
     margin-top: 1.5rem;
+    font-size: 20px;
 }
-.close {
-    width: 2rem;
+.container-card p {
+    font-size: 15px;
 }
 .div-card {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-}
-.btn-close {
-    width: 2rem;
-    margin-left: 2rem;
-    background-color: black;
-    border-radius: 100px;
 }
