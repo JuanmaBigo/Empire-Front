@@ -6,7 +6,7 @@ import Image from '../Image/Image'
 export default function CardUser({orders}) {
   console.log(orders)
   return (
-    <>
+    <div className='orders-page'>
             {
               orders?.map((res, i) => (
                 <div key={i} className='orders-section'>
@@ -33,6 +33,6 @@ export default function CardUser({orders}) {
               ))
             }
 
-    </>
+    </div>
   )
 }

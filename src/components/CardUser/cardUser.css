@@ -1,13 +1,13 @@
-.flex{
+.orders-page .flex{
     display: flex;
     width: fit-content;
     height: fit-content;
     gap: .5rem;
 }
-.flex>*{
+.orders-page .flex>*{
     color: black;
 }
-.container{
+.orders-page .container{
     width: 100%;
     min-height: 100vh;
     background-image: url("https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
@@ -21,7 +21,7 @@
     gap: .5rem;
 
 }
-.container::after {
+.orders-page .container::after {
     content: "";
     display: block;
     position: absolute;
@@ -31,48 +31,48 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
-h1{
+.orders-page h1{
     text-align: center;
     color: white;
     position: relative;
     z-index: 1;
 }
-.container-card {
+.orders-page .container-card {
     width: 100%;
     min-height: 100vh;
     background-color: aqua;
 }
-.img {
+.orders-page .img {
     width: 15rem;
     margin-left: 1.5rem;
 }
-.container-card h2 {
+.orders-page .container-card h2 {
     color: white;
     margin-left: 3.5rem;
     font-size: 30px;
 
 }
-.container-card h3 {
+.orders-page .container-card h3 {
     color: white;
     margin-top: 1.5rem;
     font-size: 20px;
 }
-.container-card p {
+.orders-page .container-card p {
     font-size: 15px;
 }
-.div-card {
+.orders-page .div-card {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
 }
-.col {
+.orders-page .col {
     flex-direction: column;
     color: white;
 }
-.orders-section{
+.orders-page .orders-section{
     width: 90%;
 }
-.card{
+.orders-page .card{
     display: flex;
     justify-content: start;
     min-width: 100%;
@@ -84,11 +84,11 @@ h1{
     -o-border-radius: .2rem;
     padding: 1rem;
 }
-.image-vehicle{
+.orders-page .image-vehicle{
     width:10rem;
     height: 10rem;
     object-fit: cover;
 }
-h2, h3, h4, h5, span{
+.orders-page h2, h3, h4, h5, span{
     color: #222;
 }

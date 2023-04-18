@@ -70,7 +70,7 @@ console.log(data)
           <div className='contain-pay'>
             <div className='div-pay'>
               <h3>TOTAL RESERVATION</h3>
-              <h3>{total}</h3>
+              <h3>{(total).toLocaleString("es-VE")}</h3>
             </div>
           </div>
           <button className='btn-pay' onClick={handleClick}> MAKE PAYMENT</button>

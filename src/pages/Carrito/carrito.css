@@ -3,7 +3,7 @@
     max-width: 90rem;
     margin: 4rem auto 0; 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }
   
@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ECECEC;
   }
   
   .contain-pay {
@@ -22,6 +23,8 @@
     background-color: black;
     padding: 1rem;
     color: white;
+    display: flex;
+    align-items: center;
   }
   
   .div-payment {
@@ -31,13 +34,19 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 2rem;
   }
   
   .div-pay {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin-top: -1rem;
+    color: white;
+  }
+
+  .div-pay h3{
     color: white;
   }
   
