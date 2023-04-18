@@ -58,7 +58,7 @@ export default function Cart() {
     }
   };
 
-// console.log(data)
+console.log(data)
   return (  
     <div className='contain-carrito'>
       <div className='contain-card'>
