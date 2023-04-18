@@ -61,6 +61,9 @@
 }
 
 .section-btn-resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: black;
     height: 10vh;
 }
@@ -72,9 +75,8 @@
 }
 
 .Btn-custome {
-    margin-top: 1rem;
     display: flex;
-    color: white;
+    color: rgb(197, 197, 197);
     padding: 0.5rem 1rem;
     background: linear-gradient(180deg, #57585D 0%, rgba(52, 52, 52, 0.747) 100%);
     box-shadow: #070707 0px 0px 2px;
@@ -84,6 +86,16 @@
     justify-content: center;
     font-size: 28px;
     transition: all 250ms linear;
+    align-self: center;
+    width: fit-content;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.Btn-custome:hover {
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
 }
 
 .div-color {
@@ -159,6 +171,11 @@
     height: 4rem;
     margin: 1rem;
     margin-left: 0;
+    object-fit: contain;
+}
+
+.color-1:hover {
+    cursor: pointer;
 }
 
 .rim-1 {
@@ -166,6 +183,11 @@
     height: 5rem;
     margin: 1rem;
     margin-left: 0;
+    object-fit: contain;
+}
+
+.rim-1:hover {
+    cursor: pointer;
 }
 
 button {
@@ -220,6 +242,12 @@ button {
     transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
+.resume-title{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    font-size: 35px;
+}
+
 .resume.visible {
     opacity: 1;
     height: auto;
@@ -235,7 +263,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    background-color: rgb(237, 237, 237);
+    height: 100vh;
 }
 
 .image-resume {
@@ -244,25 +273,63 @@ button {
 }
 
 .resume-info {
-    background: rgba(10, 10, 10, 0.368);
+    background: black;
     width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
 }
+
+.resume-info h2{
+    align-self: center;
+}
+
 
 .info-item-resume {
     display: flex;
     flex-direction: row;
-    background: rgba(255, 255, 255, 0.464);
     margin: 1rem;
     justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+.info-item-resume h3{
+    font-size: 25px;
+    margin-bottom: 0.2rem;
+}
+
+.info-item-resume p{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.info-item-resume h1{
+    font-size: 25px;
+    font-weight: 300;
 }
 
 .section-addcart {
     margin: 1rem;
     padding: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     background: rgba(4, 4, 4, 0.728);
     color: white;
+}
+
+.section-addcart1 {
+    margin-top: 3rem;
+}
+
+.section-addcart h2{
+    font-weight: 300;
+}
+
+.resume-section{
+    min-height: 100vh;
 }
 
 @media screen and (max-width: 767px) {
@@ -336,7 +403,6 @@ button {
     }
     
     .Btn-custome {
-        margin-top: 0.7rem;
         display: flex;
         color: white;
         padding: 0.5rem 1rem;
@@ -505,14 +571,12 @@ button {
     }
     
     .resume-info {
-        background: rgba(10, 10, 10, 0.368);
         width: 100%;
     }
     
     .info-item-resume {
         display: flex;
         flex-direction: row;
-        background: rgba(255, 255, 255, 0.464);
         margin: 0.5rem;
         padding: 0.3rem;
         font-size: 0.3rem;
@@ -523,7 +587,6 @@ button {
         margin: 0.5rem;
         padding: 0.2rem;
         display: flex;
-        justify-content: center;
         background: rgba(4, 4, 4, 0.728);
         color: white;
         font-size: 0.5rem;
@@ -601,7 +664,6 @@ button {
     }
     
     .Btn-custome {
-        margin-top: 0.7rem;
         display: flex;
         color: white;
         padding: 0.5rem 1rem;
@@ -623,8 +685,8 @@ button {
         left: 0;
         z-index: 1;
         background: transparent;
-       
     }
+
     .div-color2 {
         width: 100vw;
         height: 40vh;
@@ -770,14 +832,12 @@ button {
     }
     
     .resume-info {
-        background: rgba(10, 10, 10, 0.368);
         width: 100%;
     }
     
     .info-item-resume {
         display: flex;
         flex-direction: row;
-        background: rgba(255, 255, 255, 0.464);
         margin: 0.5rem;
         padding: 0.3rem;
         font-size: 0.5rem;
@@ -788,7 +848,6 @@ button {
         margin: 0.5rem;
         padding: 0.2rem;
         display: flex;
-        justify-content: center;
         background: rgba(4, 4, 4, 0.728);
         color: white;
         font-size: 0.8rem;
