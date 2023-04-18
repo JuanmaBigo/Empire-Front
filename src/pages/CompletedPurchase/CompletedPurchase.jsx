@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import {toast, Toaster } from 'react-hot-toast';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './completedPurchase.css';
 import img from '../../images/Group 41.png';
@@ -7,6 +9,7 @@ import apiUrl from '../../configHost';
 
 export default function CompletedPurchase() {
   const location = useLocation();
+  let navigate = useNavigate()
   const searchParams = new URLSearchParams(location.search);
   const [purchaseAmount, setPurchaseAmount] = useState();
   let status = searchParams.get('status')
@@ -34,8 +37,12 @@ export default function CompletedPurchase() {
         payment_method: paymentMethod,
       };
 
-console.log(data)
-      await axios.post(url, data, headers).then(res => console.log(res));
+// console.log(data)
+      await axios.post(url, data, headers).then(res => res);
+      toast.success("Order was succesfully created")
+      setTimeout(() => {
+        navigate("/orders")
+      }, 2000);
     }
   } 
   useEffect(() => {
@@ -50,6 +57,7 @@ console.log(data)
       <div>
         <h2>Your payment was made, an advisor will contact you shortly.</h2>
       </div>
+      <Toaster position="top-right" reverseOrder={false}/>
     </div>
   );
 }

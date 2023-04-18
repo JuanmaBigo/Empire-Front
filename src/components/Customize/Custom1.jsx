@@ -50,7 +50,7 @@ export default function Custom() {
     }, 600);
 
     useEffect(() => {  //solo al pricipio
-        console.log('colores', colors)
+        // console.log('colores', colors)
         if (colors.length > 0) {
             console.log('colores', colors)
             dispatch(getAllRims(colors[0]?._id))
@@ -91,7 +91,8 @@ export default function Custom() {
         let data = {
             car_id: car_id,
             color_id: selectedColor,
-            rim_id: selectedRim
+            rim_id: selectedRim,
+            bought: false
         }
 
         try {

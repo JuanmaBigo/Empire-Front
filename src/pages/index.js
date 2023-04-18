@@ -54,6 +54,7 @@ export const router = createBrowserRouter([
             {path:'AIEngine', element: <AIEngine />},
             {path: 'completed-purchase', element: <CompletedPurchase/>},
             {path: 'add-stock', element: <AddStock/>},
+            {path: 'orders', element: <OrdersUsers/>},
         ]
     } 
     

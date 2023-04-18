@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ToastContainer, toast, Toaster } from 'react-toastify'
+import {toast, Toaster } from 'react-hot-toast';
 import './carrito.css'
 import axios from 'axios'
 import Card from '../../components/Card/Card'
@@ -40,15 +40,7 @@ export default function Cart() {
       const response = await axios.post(urlP, pay, headers);
       window.location.href = response.data.response.body.init_point;
       console.log(response)
-      toast.success('Lo redirigiremos a mercadopago', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",}, )
+      toast.success('Lo redirigiremos a mercadopago' )
     } catch (error) {
       if (error.response) {
         if (typeof error.response.data.message === "string") {
@@ -66,24 +58,9 @@ export default function Cart() {
     }
   };
 
-
-  
-console.log(data)
+// console.log(data)
   return (  
     <div className='contain-carrito'>
-      <ToastContainer 
-      position="top-center"
-      autoClose={5000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="light"
-      />
-
       <div className='contain-card'>
     {data && data.map((item, index) => (
         <Card key={index} i={item} />
@@ -98,18 +75,7 @@ console.log(data)
           </div>
           <button className='btn-pay' onClick={handleClick}> MAKE PAYMENT</button>
         </div>
-        <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        />
+        <Toaster position="top-right" reverseOrder={false}/>
     </div>
   )
 }
