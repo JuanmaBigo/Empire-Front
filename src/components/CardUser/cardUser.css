@@ -89,6 +89,6 @@
     height: 10rem;
     object-fit: cover;
 }
-.orders-page h2, h3, h4, h5, span{
+.orders-page h2, .orders-page h3, .orders-page h4, .orders-page h5, .orders-page span{
     color: #222;
 }
