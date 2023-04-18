@@ -12,6 +12,7 @@ export default function CompletedPurchase() {
   let navigate = useNavigate()
   const searchParams = new URLSearchParams(location.search);
   const [purchaseAmount, setPurchaseAmount] = useState();
+  const [userId, setUserId] = useState({});
   let status = searchParams.get('status')
   let paymentId = searchParams.get('payment_id')
   let paymentMethod = searchParams.get('payment_type')
@@ -22,23 +23,26 @@ export default function CompletedPurchase() {
 
   async function getData () {
     await axios.get(urlI, headers)
-               .then(res => setPurchaseAmount(res.data.total))
-    
+               .then(res => {
+                setPurchaseAmount(res.data.total)
+                setUserId(res.data.item[0].user_id)
+            }).catch((err) => console.log(err))
+
     if (status === 'approved') {
    
       const token = localStorage.getItem('token');
       const headers = { headers: { Authorization: `Bearer ${token}` } };
-      console.log(token)
+
       const data = {
-        user_id: "643dfc12a0c4ab79b3ce1c05",
+        user_id: userId,
         payment_id: paymentId,
         totalPrice: purchaseAmount,
         status: "pending",
         payment_method: paymentMethod,
-      };
-
+      }; 
+console.log(userId)
 // console.log(data)
-      await axios.post(url, data, headers).then(res => res);
+      await axios.post(url, data, headers).then(res => res).catch(err =>console.log(err))
       toast.success("Order was succesfully created")
       setTimeout(() => {
         navigate("/orders")
