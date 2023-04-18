@@ -13,14 +13,10 @@ import SelectModel from './SelectModel/SelectModel';
 import ContactUs from './ContactUs/ContactUs';
 import Details from './Details/Details';
 import Carrito from './Carrito/Carrito';
-<<<<<<< HEAD
-import AIEngine from './AIEngine/AIEngine';
-=======
 import Custome from './Custome/Custome'
 import CompletedPurchase from './CompletedPurchase/CompletedPurchase'
 import OrdersUsers from './OrdersUsers/OrdersUsers';
 
->>>>>>> 4d9426e62a2daad123086fff00e7e74fd2ab4fb5
 
 
 import AIEngine from './AIEngine/AIEngine';
