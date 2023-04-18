@@ -13,7 +13,7 @@ export default function OrdersUsers() {
 useEffect (
   () => {
     axios.get(url, headers)
-    .then(res => setOrders(res.data))
+    .then(res => setOrders(res.data.orders))
   }, []
 )
 console.log(orders)
