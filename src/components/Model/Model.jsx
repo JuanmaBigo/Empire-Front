@@ -48,6 +48,7 @@ const filteredCars = cars?.filter(car => {
       const photo = filteredCars?.length ? filteredCars[currentIndex]?.photo : null;
       const name = filteredCars?.length ? filteredCars[currentIndex]?.name : null;
       
+    //add spinner for when are no vehicles and no filter
 
       return (
         <div className='contenedor-vehicles'>
