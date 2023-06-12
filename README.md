@@ -10,5 +10,8 @@ It features the integration of ChatGPT API for making cars recommendations based
 *user:* alejandro@mh.com.ar
 *password:* hola1234
 
-## Back End repository:
+<br>
+<br>
+
+for additional info visit the Back End repository:
 [Empire-Back](https://github.com/JuanmaBigo/Empire-Back)
