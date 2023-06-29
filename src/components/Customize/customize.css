@@ -328,9 +328,6 @@ button {
     font-weight: 300;
 }
 
-.resume-section{
-    min-height: 100vh;
-}
 
 @media screen and (max-width: 767px) {
     .cont-customize {
@@ -555,14 +552,6 @@ button {
     .contenedor-resume-custom {
         display: flex;
         flex-direction: column;
-    }
-    
-    .img-resume {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
     }
     
     .image-resume {
@@ -819,11 +808,7 @@ button {
     }
     
     .img-resume {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
+        display: none;
     }
     
     .image-resume {
