@@ -66,16 +66,12 @@
         height: 15vh;
         margin-right: 5vw;
       }
-   
     
       .btn-vehiclespage {
         width: 10rem;
         padding: 10px;
         font-family: 'Roboto', sans-serif;
         font-size: 1rem;
-        font-weight: normal;
-        color: #fff;
-        background-color: #000;
         border: none;
         margin-top: 40vh;
       }
