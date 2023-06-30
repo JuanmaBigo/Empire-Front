@@ -9,8 +9,6 @@ import { Link as Anchor } from 'react-router-dom'
 
 
 
-
-
 export default function Login() {
   let email = useRef()
   let password = useRef()
@@ -46,7 +44,6 @@ export default function Login() {
       toast.success("Successful session start")
     } catch (error) {
       toast.error("wrong credentials!")
-      toast.error("You haven't verified yourself, check your email", { duration: 5000 })
     }
     event.target.reset()
 
@@ -66,6 +63,10 @@ export default function Login() {
           <input type="submit" className='btnLogin' value="LOGIN" />
         </form>
       </div>
+      <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
     </div>
   )
 }
