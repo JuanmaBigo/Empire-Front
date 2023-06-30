@@ -10,6 +10,7 @@ import { Link as Anchor } from 'react-router-dom'
 import { useParams } from "react-router"
 import modelActions from "../../store/model/actions.js"
 import img from '../../assets/img/title-makeIt.png'
+import { Toaster, toast } from 'react-hot-toast'
 const { getAllColors } = colorActions
 const { getAllRims } = rimActions
 const { getOne } = modelActions
@@ -88,29 +89,29 @@ export default function Custom() {
     let url = `${apiUrl}items`
 
     async function handleItem() {
-        let data = {
-            car_id: car_id,
-            color_id: selectedColor,
-            rim_id: selectedRim,
-            bought: false
-        }
+        let token = localStorage.getItem('token')
+        if (token) {
+            let data = {
+                car_id: car_id,
+                color_id: selectedColor,
+                rim_id: selectedRim,
+                bought: false
+            }
 
-        try {
-            await axios.post(url, data, headers)
-            navigate("/cart")
-        } catch (error) {
-            console.log(error)
+            try {
+                await axios.post(url, data, headers)
+                navigate("/cart")
+            } catch (error) {
+                console.log(error)
+            }
+            console.log(data)
+        } else {
+            toast.error('You must be logged in to add to cart', 
+            {style: {
+                marginBottom: '100px',
+            }})
         }
-        console.log(data)
-
     }
-
-    //boton add to cart q se desplega
-    const [showResume, setShowResume] = useState(false);
-
-    const handleResumeButtonClick = () => {
-        setShowResume(!showResume);
-    };
 
 
     return (
@@ -202,60 +203,64 @@ export default function Custom() {
                 </div>
             </div>
             <div>
-                    <div className='resume-section'>
-                        <div className='contenedor-resume-custom'>
-                            <div className='img-resume'>
-                                <img
-                                    src={photoVehicle}
-                                    alt="Imagen de ejemplo"
-                                    className='image-resume'
-                                />
+                <div className='resume-section'>
+                    <div className='contenedor-resume-custom'>
+                        <div className='img-resume'>
+                            <img
+                                src={photoVehicle}
+                                alt="Imagen de ejemplo"
+                                className='image-resume'
+                            />
+                        </div>
+
+                        <div className='resume-info'>
+                            <h2 className='resume-title'>RESUME</h2>
+                            <div className='info-item-resume'>
+                                <div>
+                                    <h3>BASE</h3>
+                                    <p>{car?.name}</p>
+                                </div>
+                                <div>
+                                    <h1>${(car?.price)?.toLocaleString("es-VE")}</h1>
+                                </div>
+                            </div>
+                            <div className='info-item-resume'>
+                                <div>
+                                    <h3>COLOR</h3>
+                                    <p>{colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.name}</p>
+                                </div>
+                                <div>
+                                    <h1>${(colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color)?.toLocaleString("es-VE")}</h1>
+                                </div>
                             </div>
 
-                            <div className='resume-info'>
-                                <h2 className='resume-title'>RESUME</h2>
-                                <div className='info-item-resume'>
-                                    <div>
-                                        <h3>BASE</h3>
-                                        <p>{car?.name}</p>
-                                    </div>
-                                    <div>
-                                        <h1>${(car?.price)?.toLocaleString("es-VE")}</h1>
-                                    </div>
+                            <div className='info-item-resume'>
+                                <div>
+                                    <h3>RIMS</h3>
+                                    <p>{rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.name}</p>
                                 </div>
-                                <div className='info-item-resume'>
-                                    <div>
-                                        <h3>COLOR</h3>
-                                        <p>{colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.name}</p>
-                                    </div>
-                                    <div>
-                                        <h1>${(colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color)?.toLocaleString("es-VE")}</h1>
-                                    </div>
+                                <div>
+                                    <h1>${(rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h1>
                                 </div>
-
-                                <div className='info-item-resume'>
-                                    <div>
-                                        <h3>RIMS</h3>
-                                        <p>{rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.name}</p>
-                                    </div>
-                                    <div>
-                                        <h1>${(rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h1>
-                                    </div>
-                                </div>
-
-                                <div className='section-addcart1 section-addcart'>
-                                    <h2>GRAND TOTAL</h2>
-                                    <h2>${(car?.price + colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h2>
-                                </div>
-                                <div className='section-addcart'>
-                                    <h2>RESERVATION</h2>
-                                    <h2>${(car?.reservePrice + colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h2>
-                                </div>
-                                <button className='Btn-custome' onClick={handleItem}>ADD TO CART</button>
                             </div>
+
+                            <div className='section-addcart1 section-addcart'>
+                                <h2>GRAND TOTAL</h2>
+                                <h2>${(car?.price + colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h2>
+                            </div>
+                            <div className='section-addcart'>
+                                <h2>RESERVATION</h2>
+                                <h2>${(car?.reservePrice + colors[parseInt(selectedOption.charAt(selectedOption.length - 1)) - 1]?.price_color + rims[parseInt(selectedOptionRim.charAt(selectedOptionRim.length - 1)) - 1]?.price_rim)?.toLocaleString("es-VE")}</h2>
+                            </div>
+                            <button className='Btn-custome' onClick={handleItem}>ADD TO CART</button>
                         </div>
                     </div>
+                    <Toaster
+                        position="center-bottom"
+                        reverseOrder={false}
+                    />
                 </div>
+            </div>
         </div>
     )
 }
